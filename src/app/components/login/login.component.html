@@ -1,10 +1,33 @@
-<form class="container-fluid espacio-elementos">
-    <label class="texto-titulo">BIENVENIDO</label>
-    <label class="texto-subtitulo">ID</label>
-    <input type="number" class="entrada-texto borde-correcto">
-    <label class="texto-subtitulo">Contraseña</label>
-    <input type="password" class="entrada-texto borde-incorrecto">
-    <div class="d-flex justify-content-center">
-    <button type="submit" class="btn-ingresar btn-deshabilitado-color">ENTRAR</button>
-    </div>
-</form>
+<!-- <div class="container-fluid login-padre">
+    <form class="container-fluid formulario">
+        <label class="texto-titulo">BIENVENIDO</label>
+        <label class="texto-subtitulo">ID</label>
+        <input type="number" class="entrada-texto borde-correcto">
+        <label class="texto-subtitulo">Contraseña</label>
+        <input type="password" class="entrada-texto borde-incorrecto">
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn-ingresar btn-deshabilitado-color">ENTRAR</button>
+        </div>
+    </form>
+</div> -->
+
+<div class="container-fluid login-padre">
+    <div class="logo-login"></div>
+    <form class="container-fluid formulario">
+        <label class="texto-titulo">BIENVENIDO</label>
+        <label require class="texto-subtitulo">ID</label>
+        <div class="input-icono">
+            <input type="number" class="entrada-texto borde-correcto">
+            <!-- <i class="far fa-check-circle" aria-hidden="true"></i> -->
+            <i class="fa fa-check-circle fa-2x icono-id" aria-hidden="true"> </i>
+        </div>
+        <label class="texto-subtitulo">Contraseña</label>
+        <div class="input-icono">
+            <input type="password" class="entrada-texto borde-incorrecto">
+            <i class="fa fa-eye-slash fa-2x icono-id" aria-hidden="true"></i>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn-ingresar btn-deshabilitado-color">ENTRAR</button>
+        </div>
+    </form>
+</div>
