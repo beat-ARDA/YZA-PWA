@@ -1,0 +1,66 @@
+.espacio-elementos 
+{
+    padding-left: 1.4167rem;
+    padding-right: 1.4167rem;
+    padding-top: 1.25rem;
+    padding-bottom: 3.6667rem;
+}
+
+.texto-titulo {
+    font-family: 'lato-heavy';
+    font-size: 1.3167rem;
+    letter-spacing: 0.11rem;
+    color: #0047cc;
+}
+
+.texto-subtitulo {
+    font-family: 'lato-regular';
+    font-size: 1rem;
+    color: #77869e;
+    letter-spacing: 0.0208rem;
+    margin-top: 1.0833rem;
+    display: block;
+}
+
+.entrada-texto 
+{
+    font-family: 'lato-medium';
+    font-size: 1.5rem;
+    letter-spacing: 0.0375rem;
+    color: #746a96;
+    width: 100%;
+    margin-top: 1.0833rem;
+    border-top: 0.0rem;
+    border-left: 0.0rem;
+    border-right: 0.0rem;
+}
+
+.borde-correcto {
+    border-bottom-color: #2ad95a;
+}
+
+.borde-incorrecto {
+    border-bottom-color: red;
+}
+
+.btn-ingresar 
+{
+    width: 100%;
+    font-family: 'lato-heavy';
+    font-size: 1.1rem;
+    letter-spacing: 0.0733rem;
+    margin-top: 3rem;
+    margin-left: 2.5833rem;
+    margin-right: 2.5833rem;
+    margin-bottom: 0.0rem;
+    padding-top: 1.1667rem;
+    padding-bottom: 1.1667rem;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.btn-deshabilitado-color 
+{
+    background-color: #a5a5a5;
+}

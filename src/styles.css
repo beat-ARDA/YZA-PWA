@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: lato-heavy;
+    src: url(assets/fonts/Lato-Heavy.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: lato-regular;
+    src: url(assets/fonts/Lato-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: lato-medium;
+    src: url(assets/fonts/Lato-Medium.ttf) format("opentype");
+}
