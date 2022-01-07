@@ -1,0 +1,8 @@
+.box{
+    width: 50%;
+    height: 90px;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(145, 144, 144);
+  }
