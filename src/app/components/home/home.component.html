@@ -1,29 +1,42 @@
 <body>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<div class="box">
-        <b class="venta"> Venta</b>
-    <div class="iconoDolar">
-<i class="fas fa-dollar-sign fa-2x" style="width: 20px;"></i>
+  <div class="box" *ngFor="let box of boxes">
+    <b class="nombre">{{box.nombre}}</b>
+    <div>
+      <i [class]='box.icono' aria-hidden="true"></i>
     </div>
-</div> 
-
-<div class="box">
-    <b class="unidades">Unidades</b>
-    <div class="iconoCaja">
-    <i class="fas fa-box-open fa-2x"></i>
-    </div>
-</div>
-
-<div class="box">
-    <b class="contribucion">Contribución</b>
-    <div class="iconoMas">
-        <i class="far fa-plus-square fa-3x"></i>
-    </div>
-</div>
-<div class="box">
-    <b class="margen">Margen</b>
-    <div class="iconoMargen">
-        <i class="fas fa-percent fa-2x" style="width: 30px;"></i>
-    </div>
-</div>
+    <b class="p4">P4</b>
+    <b class='moneyP4'>{{box.moneyP4}}</b>
+    <b class="p11">P11</b>
+    <b class="'moneyP11">{{box.moneyP11}}</b>
+    <b class="var">Var</b>
+    <b class='moneyVar'>{{box.moneyVar}}</b>
+  </div>
 </body>
+
+<!-- <b class="nombre"> Venta</b>
+    <div>
+      <i
+        class="iconoDolar fa fa-dollar-sign fa-2x icono-id"
+        aria-hidden="true"
+      ></i>
+    </div>
+  </div>
+
+  <div class="box">
+    <b class="nombre">Unidades</b>
+    <div class="iconoCaja">
+      <i class="fas fa-box-open fa-2x"></i>
+    </div>
+  </div>
+
+  <div class="box">
+    <b class="nombre">Contribución</b>
+    <div class="iconoMas">
+      <i class="far fa-plus-square fa-3x"></i>
+    </div>
+  </div>
+  <div class="box">
+    <b class="nombre">Margen</b>
+    <div class="iconoMargen">
+      <i class="fas fa-percent fa-2x" style="width: 30px"></i>
+    </div> -->

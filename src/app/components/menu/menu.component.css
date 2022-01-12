@@ -33,12 +33,15 @@
   } */
 
   .scrollMenu {
-    background-color: #333;
+    width: auto;
+    height: auto;
+    background-color: #F7F9FC;
     overflow: auto;
     white-space: nowrap;
+    box-shadow: 0px -2px lightgray;
   }
   
-   .etiquetaA {
+   .etiqueta {
     display: inline-block;
     color: white;
     text-align: center;
@@ -46,6 +49,10 @@
     text-decoration: none;
   }
   
-  .etiquetaA:hover {
+  .etiqueta:hover {
     background-color: #777;
+  }
+
+  .icono{
+    color: #222831;
   }

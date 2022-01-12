@@ -17,3 +17,8 @@ html {
     font-family: lato-medium;
     src: url(assets/fonts/Lato-Medium.ttf) format("opentype");
 }
+
+@font-face {
+    font-family: lato-bold;
+    src: url(assets/fonts/Lato-Bold.ttf) format("opentype");
+}
