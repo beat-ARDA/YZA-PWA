@@ -1,21 +1,44 @@
+.titulo-card {
+    font-family: 'lato-medium';
+    font-size: 1.4167rem;
+    letter-spacing: 0.0192rem;
+}
+
+.icono {
+  padding-left: 1.0833rem;
+}
+
+.col-4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-fluid {
+  padding-left: 0.6667rem;
+  padding-right: 0.6667rem;
+}
+
 .cartas {
   /* width:  30rem;*/
   height: 8.3333rem;
   margin-bottom: 1rem !important;
   margin-top: 1rem;
-  margin-left: 0.6667rem;
-  margin-right: 0.5833rem;
   background-color: white;
   box-shadow: 0 0 8px rgb(204, 210, 222);
 }
 
-.nombre{
-  font-family:lato-medium;
+.nombre {
+  font-family: lato-medium;
   color: #222831;
   letter-spacing: 0.0192rem;
   size: 1.4167rem;
   padding-top: 0.75rem;
-  padding-left: 0.73rem; 
+  padding-left: 0.73rem;
   padding-bottom: 5.8333rem;
 }
 
@@ -27,27 +50,30 @@
   padding-top: 1.5rem;
 }
 
-.p4{
+.p4 {
   font-family: lato-regular;
   color: #546CF1;
   letter-spacing: 0.0217rem;
   size: 1.25rem;
   margin-top: 0.75rem;
   /*padding-left: 11.25rem;*/
-  margin-bottom: 5.8333rem; 
+  margin-bottom: 5.8333rem;
 }
 
-.moneyP4{
+.money {
+  padding-top: 2.75rem;
+  padding-bottom: 3.8333rem;
+}
+
+.moneyP4 {
   font-family: lato-bold;
   color: #71757B;
   letter-spacing: 0.0208rem;
   size: 1.1667rem;
-  padding-top: 2.75rem;
-  padding-bottom: 3.8333rem;
   /*padding-left: 11.25rem; */
 }
 
-.p11{
+.p11 {
   font-family: lato-regular;
   color: #546CF1;
   letter-spacing: 0.0217rem;
@@ -57,7 +83,7 @@
   padding-bottom: 5.8333rem;
 }
 
-.moneyP11{
+.moneyP11 {
   font-family: lato-bold;
   color: #71757B;
   letter-spacing: 0.0208rem;
@@ -67,16 +93,16 @@
   /* padding-left: 21.5rem; */
 }
 
-.var{
+.var {
   font-family: lato-regular;
   color: #71757B;
   letter-spacing: 0.0217rem;
   size: 1.25rem;
   padding-top: 5.8333rem;
   padding-bottom: 0.75rem;
-} 
+}
 
-.moneyVar{
+.moneyVar {
   font-family: lato-heavy;
   color: #546CF1;
   letter-spacing: 0.0192rem;
@@ -86,7 +112,7 @@
   /* padding-left: 21.25rem; */
 }
 
-.iconoCaja{
+.iconoCaja {
   color: #46A100;
   background-color: white;
   padding-left: 1.0833rem;
@@ -112,4 +138,3 @@
   position: fixed;
   margin-left: 5px;
 } */
-

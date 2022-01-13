@@ -1,69 +1,30 @@
-<div class="cartas" *ngFor="let card of cards">
-  <div class="row">
-    <div class="col-4">
-      <b class="nombre">{{ card.nombre }}</b>
-      <div>
-        <i [class]="card.icono" aria-hidden="true"></i>
+<div class="container-fluid">
+  <div class="cartas" *ngFor="let card of cards">
+    <div class="row">
+      <div class="col-4">
+        <b class="titulo-card" titulo>{{ card.nombre }}</b>
+        <!-- <div>
+          <i class="icono" [class]="card.icono" aria-hidden="true"></i>
+        </div> -->
       </div>
-    </div>
-    <div class="col-4">
-      <b class="p4">P4</b>
-      <div>
-        <b class="moneyP4">{{ card.moneyP4 }}</b>
+      <!-- <div class="col-4">
+        <b class="p4">P4</b>
+        <div class="money">
+          <b class="moneyP4">{{ card.moneyP4 }}</b>
+        </div>
+        <div>
+          <b class="var">Var</b>
+        </div>
       </div>
-      <div>
-        <b class="var">Var</b>
-      </div>
-    </div>
-    <div class="col-4">
-    <b class="p11">P11</b>
-    <div>
-      <b class="moneyP11">{{ card.moneyP11 }}</b>
-    </div>
-    <div>
-      <b class="moneyVar">{{ card.moneyVar }}</b>
+      <div class="col-4">
+        <b class="p11">P11</b>
+        <div>
+          <b class="moneyP11">{{ card.moneyP11 }}</b>
+        </div>
+        <div>
+          <b class="moneyVar">{{ card.moneyVar }}</b>
+        </div>
+      </div> -->
     </div>
   </div>
 </div>
-
-<!-- <div class="box" style="max-height: 100%;" *ngFor="let box of boxes">
-    <b class="nombre">{{box.nombre}}</b>
-    <div>
-      <i [class]='box.icono' aria-hidden="true"></i>
-    </div>
-    <b class="p4">P4</b>
-    <b class='moneyP4'>{{box.moneyP4}}</b>
-    <b class="p11">P11</b>
-    <b class="'moneyP11">{{box.moneyP11}}</b>
-    <b class="var">Var</b>
-    <b class='moneyVar'>{{box.moneyVar}}</b>
-  </div> -->
-<!-- </body> -->
-
-<!-- <b class="nombre"> Venta</b>
-    <div>
-      <i
-        class="iconoDolar fa fa-dollar-sign fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-    </div>
-  </div>
-
-  <div class="box">
-    <b class="nombre">Unidades</b>
-    <div class="iconoCaja">
-      <i class="fas fa-box-open fa-2x"></i>
-    </div>
-  </div>
-
-  <div class="box">
-    <b class="nombre">Contribución</b>
-    <div class="iconoMas">
-      <i class="far fa-plus-square fa-3x"></i>
-    </div>
-  </div>
-  <div class="box">
-    <b class="nombre">Margen</b>
-    <div class="iconoMargen">
-      <i class="fas fa-percent fa-2x" style="width: 30px"></i>
-    </div> -->
