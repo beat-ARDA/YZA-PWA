@@ -1,21 +1,21 @@
-.box {
-  width:  30rem;
+.cartas {
+  /* width:  30rem;*/
   height: 8.3333rem;
-  margin: 1.5625rem auto;
-  padding-top: 1rem;
-  padding-left: 0.5833rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem;
+  margin-left: 0.6667rem;
+  margin-right: 0.5833rem;
   background-color: white;
-  box-shadow: 0 0 15px rgb(145, 144, 144);
+  box-shadow: 0 0 8px rgb(204, 210, 222);
 }
 
 .nombre{
   font-family:lato-medium;
   color: #222831;
-  letter-spacing: -0.0192rem;
+  letter-spacing: 0.0192rem;
   size: 1.4167rem;
   padding-top: 0.75rem;
-  padding-left: 0.75rem;
+  padding-left: 0.73rem; 
   padding-bottom: 5.8333rem;
 }
 
@@ -24,73 +24,74 @@
   background-color: white;
   padding-left: 1.0833rem;
   padding-bottom: 1.4167rem;
+  padding-top: 1.5rem;
 }
 
 .p4{
   font-family: lato-regular;
   color: #546CF1;
-  letter-spacing: -0.0217rem;
+  letter-spacing: 0.0217rem;
   size: 1.25rem;
-  padding-top: 0.75rem;
-  padding-left: 11.25rem;
-  padding-bottom: 5.8333rem;
+  margin-top: 0.75rem;
+  /*padding-left: 11.25rem;*/
+  margin-bottom: 5.8333rem; 
 }
 
 .moneyP4{
   font-family: lato-bold;
   color: #71757B;
-  letter-spacing: -0.0208rem;
+  letter-spacing: 0.0208rem;
   size: 1.1667rem;
   padding-top: 2.75rem;
   padding-bottom: 3.8333rem;
-  padding-left: 11.25rem;
+  /*padding-left: 11.25rem; */
 }
 
 .p11{
   font-family: lato-regular;
   color: #546CF1;
-  letter-spacing: -0.0217rem;
+  letter-spacing: 0.0217rem;
   size: 1.25rem;
   padding-top: 0.75rem;
-  padding-left: 21.5rem;
+  /* padding-left: 21.5rem; */
   padding-bottom: 5.8333rem;
 }
 
 .moneyP11{
   font-family: lato-bold;
   color: #71757B;
-  letter-spacing: -0.0208rem;
+  letter-spacing: 0.0208rem;
   size: 1.1667rem;
   padding-top: 2.75rem;
   padding-bottom: 3.8333rem;
-  padding-left: 21.5rem;
+  /* padding-left: 21.5rem; */
 }
 
 .var{
   font-family: lato-regular;
   color: #71757B;
-  letter-spacing: -0.0217rem;
+  letter-spacing: 0.0217rem;
   size: 1.25rem;
   padding-top: 5.8333rem;
   padding-bottom: 0.75rem;
-  padding-left: 21.5rem;
-}
+} 
 
 .moneyVar{
   font-family: lato-heavy;
   color: #546CF1;
-  letter-spacing: .0.0192rem;
+  letter-spacing: 0.0192rem;
   size: 1.4167;
   padding-top: 5.8333rem;
-  padding-bottom: 0.75rem;
-  padding-left: 21.25rem;
+  padding-bottom: 0.75rem !important;
+  /* padding-left: 21.25rem; */
 }
 
 .iconoCaja{
-  color: green;
-  position: fixed;
-  margin-left: 5px;
-  margin-top: 3px;
+  color: #46A100;
+  background-color: white;
+  padding-left: 1.0833rem;
+  padding-bottom: 1.4167rem;
+  padding-top: 1.5rem;
 }
 
 /* .iconoMas{

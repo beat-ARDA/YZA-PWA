@@ -1,5 +1,32 @@
-<body>
-  <div class="box" *ngFor="let box of boxes">
+<div class="cartas" *ngFor="let card of cards">
+  <div class="row">
+    <div class="col-4">
+      <b class="nombre">{{ card.nombre }}</b>
+      <div>
+        <i [class]="card.icono" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="col-4">
+      <b class="p4">P4</b>
+      <div>
+        <b class="moneyP4">{{ card.moneyP4 }}</b>
+      </div>
+      <div>
+        <b class="var">Var</b>
+      </div>
+    </div>
+    <div class="col-4">
+    <b class="p11">P11</b>
+    <div>
+      <b class="moneyP11">{{ card.moneyP11 }}</b>
+    </div>
+    <div>
+      <b class="moneyVar">{{ card.moneyVar }}</b>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="box" style="max-height: 100%;" *ngFor="let box of boxes">
     <b class="nombre">{{box.nombre}}</b>
     <div>
       <i [class]='box.icono' aria-hidden="true"></i>
@@ -10,8 +37,8 @@
     <b class="'moneyP11">{{box.moneyP11}}</b>
     <b class="var">Var</b>
     <b class='moneyVar'>{{box.moneyVar}}</b>
-  </div>
-</body>
+  </div> -->
+<!-- </body> -->
 
 <!-- <b class="nombre"> Venta</b>
     <div>
