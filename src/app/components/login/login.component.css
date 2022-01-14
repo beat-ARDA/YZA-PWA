@@ -33,19 +33,28 @@
     color: #546CF1;
 }
 
-.texto-subtitulo {
-    font-family: 'lato-regular';
-    font-size: 1rem;
-    color: #77869e;
-    letter-spacing: 0.0208rem;
-    margin-top: 1.0833rem;
-    display: block;
+.icono-id {
+    background-image: url('../../../assets/Assets/iOS/ic_id.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.6667rem;
+    display: inline-block;
+    top: 0rem;
+    left: 92%;
+    position: absolute;
 }
 
-.icono-id {
+.icono-contraseña {
+    background-image: url('../../../assets/Assets/iOS/ic_candado.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.6667rem;
+    display: inline-block;
+    top: 0rem;
+    left: 92%;
     position: absolute;
-    color: green;
-    right: 1.1667rem;
 }
 
 .input-icono {
@@ -54,15 +63,20 @@
 
 .entrada-texto {
     font-family: 'lato-medium';
-    font-size: 1.5rem;
-    letter-spacing: 0.0375rem;
+    font-size: 1.3333rem;
+    letter-spacing: 0.0333rem;
     color: #746a96;
     width: 100%;
-    margin-top: 1.0833rem;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 0rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
     border-top: 0.0rem;
     border-left: 0.0rem;
     border-right: 0.0rem;
     outline: none;
+    display: block;
 }
 
 .borde-correcto {
