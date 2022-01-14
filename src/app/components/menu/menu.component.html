@@ -6,6 +6,28 @@
     <a class="navbar-brand" href="#"></a>
     <div class="row flex-nowrap">
       <div class="col">
+        <a (click)="cambioIcono("SOI")">
+        <img class="icono" src="../../../assets/Android/hdpi/ic_soi_off.png" *ngIf="!soi" >
+        <img  class="icono" src="../../../assets/Android/hdpi/ic_soi_on.png" *ngIf="soi" >
+        <p>SOI</p>
+      </a>
+      </div>
+
+      <div class="col">
+        <a>
+        <img class="icono" [src]="bb">
+        <p>Bebé</p>
+      </a>
+      </div>
+
+      <div class="col">
+        <i
+          class="icono fa fa-align-justify fa-2x icono-id"
+          aria-hidden="true"
+        ></i>
+        <p>SOI</p>
+      </div>
+      <div class="col">
         <i
           class="icono fa fa-align-justify fa-2x icono-id"
           aria-hidden="true"

@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     this.cards = [
       {
         nombre: 'Venta',
-        icono: 'iconoDolar fa fa-dollar-sign fa-2x icono-id',
+        icono: '',
         moneyP4: '$ 1.00.000',
         moneyP11: '$ 2.000.000',
         moneyVar: '$ 1.000.000',

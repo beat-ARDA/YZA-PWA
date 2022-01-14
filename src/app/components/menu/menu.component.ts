@@ -6,10 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+    soi: boolean;
+    bb: boolean;
+  constructor() { 
+    this.soi= false;
+    this.bb= false;
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }
 
+  cambioIcono(icono:string){
+    if(icono == "SOI"){
+      this.soi= true
+    }
+    else if(icono != "SOI"){
+      this.soi= false
+    }
+    if(icono == "BEBE"){
+      this.bb=true
+    }
+    else if(icono != "BEBE"){
+      this.bb= false
+    }
+
+  }
 }
+
+
