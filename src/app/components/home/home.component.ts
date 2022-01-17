@@ -11,34 +11,34 @@ export class HomeComponent implements OnInit {
     this.cards = [
       {
         nombre: 'Venta',
-        icono: '',
+        icono: '../../../assets/Assets/iOS/ic_venta.png',
         moneyP4: '$ 1.00.000',
         moneyP11: '$ 2.000.000',
         moneyVar: '$ 1.000.000',
       },
       {
         nombre: 'Unidades',
-        icono: 'iconoCaja fa fa-box-open fa-2x',
+        icono: '../../../assets/Assets/iOS/ic_venta.png',
         moneyP4: '$ 300.000',
         moneyP11: '$ 1.000.000',
         moneyVar: '$ 700.000',
       },
       {
         nombre: 'Contribución',
-        icono: 'iconoDolar fa fa-dollar-sign fa-2x icono-id',
+        icono: '../../../assets/Assets/iOS/ic_venta.png',
         moneyP4: '$ 400.000',
         moneyP11: '$ 1.200.000',
         moneyVar: '$ 800.000',
       },
       {
         nombre: 'Margen',
-        icono: 'iconoDolar fa fa-dollar-sign fa-2x icono-id',
+        icono: '../../../assets/Assets/iOS/ic_venta.png',
         moneyP4: '30%',
         moneyP11: '60%',
         moneyVar: '30%',
-      },
+      }
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

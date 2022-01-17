@@ -1,145 +1,81 @@
-.titulo-card {
-    font-family: 'lato-medium';
-    font-size: 1.4167rem;
-    color: #222831;
-    letter-spacing: 0.0192rem;
-    padding-top: 0.75rem;
-    padding-left: 0.73rem;
-}
-
-.icono {
-  padding-left: 1.0833rem;
-  background-position: center;
-  background-size: contain;
+.row {
+  margin: 0rem;
+  padding: 0.75rem;
 }
 
 .col-4 {
-  padding: 0px;
-  margin: 0px;
+  margin: 0rem;
+  padding: 0rem;
 }
 
-.row {
-  margin: 0px;
-  padding: 0px;
-}
-
-.container-fluid {
+.padre {
+  padding-top: 1rem;
   padding-left: 0.6667rem;
   padding-right: 0.6667rem;
+  background-color: #F7F9FC;
 }
 
-.cartas {
-  /* width:  30rem;*/
-  height: 8.3333rem;
-  margin-bottom: 1rem !important;
-  margin-top: 1rem;
+.carta {
+  padding: 0px;
   background-color: white;
-  box-shadow: 0 0 8px rgb(204, 210, 222);
+  margin-bottom: 1rem;
+  box-shadow: 0rem 0.1667rem 0.3333rem 0rem rgba(188, 202, 224, 0.5);
+  border-radius: 0.3333rem;
 }
 
-.nombre {
-  font-family: lato-medium;
-  color: #222831;
-  letter-spacing: 0.0192rem;
-  size: 1.4167rem;
-  padding-top: 0.75rem;
-  padding-left: 0.73rem;
-  padding-bottom: 5.8333rem;
+.titulo-carta {
+  font-family: 'lato-medium';
+  font-size: 1.4167rem;
+  letter-spacing: -0.0192rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
 }
 
-.iconoDolar {
-  color: #46A100;
-  background-color: white;
-  padding-left: 1.0833rem;
-  padding-bottom: 1.4167rem;
-  padding-top: 1.5rem;
+.icono-carta {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.9167rem;
+  height: 2.9167rem;
+  /* margin-bottom: 0.6667rem; */
 }
 
-.p4 {
-  font-family: lato-regular;
+.subtitulo {
+  font-family: 'lato-regular';
+  font-size: 1.25rem;
+  letter-spacing: -0.0217rem;
   color: #546CF1;
-  letter-spacing: 0.0217rem;
-  size: 1.25rem;
-  margin-top: 0.75rem;
-  /*padding-left: 11.25rem;*/
-  margin-bottom: 5.8333rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0.25rem;
 }
 
 .money {
-  padding-top: 2.75rem;
-  padding-bottom: 3.8333rem;
-}
-
-.moneyP4 {
-  font-family: lato-bold;
-  color: #71757B;
-  letter-spacing: 0.0208rem;
-  size: 1.1667rem;
-  /*padding-left: 11.25rem; */
-}
-
-.p11 {
-  font-family: lato-regular;
-  color: #546CF1;
-  letter-spacing: 0.0217rem;
-  size: 1.25rem;
-  padding-top: 0.75rem;
-  /* padding-left: 21.5rem; */
-  padding-bottom: 5.8333rem;
-}
-
-.moneyP11 {
-  font-family: lato-bold;
-  color: #71757B;
-  letter-spacing: 0.0208rem;
-  size: 1.1667rem;
-  padding-top: 2.75rem;
-  padding-bottom: 3.8333rem;
-  /* padding-left: 21.5rem; */
+  font-family: 'lato-bold';
+  font-size: 1.1667rem;
+  letter-spacing: -0.0208rem;
+  color: #4E535A;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 1.3333rem;
 }
 
 .var {
-  font-family: lato-regular;
-  color: #71757B;
-  letter-spacing: 0.0217rem;
-  size: 1.25rem;
-  padding-top: 5.8333rem;
-  padding-bottom: 0.75rem;
+  font-family: 'lato-regular';
+  font-size: 1.25rem;
+  letter-spacing: -0.0217rem;
+  color: #4E535A;
+  margin: 0px;
 }
 
-.moneyVar {
-  font-family: lato-heavy;
-  color: #546CF1;
-  letter-spacing: 0.0192rem;
-  size: 1.4167;
-  padding-top: 5.8333rem;
-  padding-bottom: 0.75rem !important;
-  /* padding-left: 21.25rem; */
+.var-money {
+  font-family: 'lato-heavy';
+  font-size: 1.4167rem;
+  letter-spacing: -0.0192rem;
+  color: #306CF1;
+  margin: 0px;
 }
-
-.iconoCaja {
-  color: #46A100;
-  background-color: white;
-  padding-left: 1.0833rem;
-  padding-bottom: 1.4167rem;
-  padding-top: 1.5rem;
-}
-
-/* .iconoMas{
-  color: green; 
-  position: fixed;
-  margin-left: 5px;
-}
-
-.iconoMargen{
-  color: green;
-  background-color: white;
-  border-width: 3px;
-  border-style: solid;
-  border-color: green;
-  border-image: initial;
-  border-radius: 5px;
-  padding: 3px;
-  position: fixed;
-  margin-left: 5px;
-} */
