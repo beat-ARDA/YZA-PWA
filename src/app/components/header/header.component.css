@@ -9,7 +9,17 @@ nav {
     color: #676767;
     font-family: 'lato-heavy';
     text-align: center !important;
-    font-size: 1.3333rem !important;
+    /* font-size: 1.3333rem !important; */
      /* padding: 2px;  */
     text-decoration: none;
+}
+
+.atras{
+  height: 1.1667rem;
+  margin-left: 1.1667rem;
+}
+
+.salir{
+  height: 1.3333rem !important;
+  margin-right: 1.1667rem;
 }
