@@ -1,196 +1,41 @@
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <div class="scrollMenu container-fluid" style="    position: absolute;
   bottom: 0px;
-  width: 102%;
-  margin-bottom: -9px;">
-    <a class="navbar-brand" href="#"></a>
-    <div class="row flex-nowrap">
-      <div class="col">
-        <a (click)="cambioIcono("SOI")">
-        <img class="icono" src="../../../assets/Android/hdpi/ic_soi_off.png" *ngIf="!soi" >
-        <img  class="icono" src="../../../assets/Android/hdpi/ic_soi_on.png" *ngIf="soi" >
-        <p>SOI</p>
-      </a>
+  height: 4.9167rem;
+  width: 100%;
+ overflow-y: hidden;">
+    <div class="navbar-brand" href="#" ></div>
+    <div class="row flex-nowrap  mx-auto">
+       <div class="col-3  justify-content-center text-center" (click)="cambioIcono('SOI')">
+        <img class="iconoSoi" src="{{soi ? '../../../assets/Android/hdpi/ic_soi_on.png': '../../../assets/Android/hdpi/ic_soi_off.png'}}" />
+        <!-- <img  class="iconoSoi" src="../../../assets/Android/hdpi/ic_soi_on.png" *ngIf="soi"  /> -->
+        <p class="nombre" [ngClass]="{'verdeNombre': soi}">SOI</p>
+      </div> 
+
+       <div class="col-3 justify-content-center text-center" (click)="cambioIcono('BEBE')">
+        <img class="iconobb" src="{{bb ? '../../../assets/Android/hdpi/ic_bb_on.png': '../../../assets/Android/hdpi/ic_bb_off.png'}}" />
+        <p class="nombre" [ngClass]="{'verdeNombre': bb}">Bebé</p>
+      </div>
+      
+      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('FARMA')">
+        <img class="iconoFarma" src="{{farma ? '../../../assets/Android/hdpi/ic_farma_on.png': '../../../assets/Android/hdpi/ic_farma_off.png'}}" />
+        <p class="nombre" [ngClass]="{'verdeNombre': farma}">Farma</p>
       </div>
 
-      <div class="col">
-        <a>
-        <img class="icono" [src]="bb">
-        <p>Bebé</p>
-      </a>
+      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('AC')">
+        <img class="iconoAc" src="{{ac ? '../../../assets/Android/hdpi/ic_farma_ac_on.png': '../../../assets/Android/hdpi/ic_farma_ac_off.png'}}" />
+        <p class="nombre" [ngClass]="{'verdeNombre': ac}">Farma AC</p>
       </div>
 
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
+      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('HCP')">
+        <img class="iconoHcp" src="{{hcp ? '../../../assets/Android/hdpi/ic_evo_farma_on.png': '../../../assets/Android/hdpi/ic_evo_farma_off.png'}}" />
+        <p class="nombre" [ngClass]="{'verdeNombre': hcp}">HCP</p>
       </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
-      <div class="col">
-        <i
-          class="icono fa fa-align-justify fa-2x icono-id"
-          aria-hidden="true"
-        ></i>
-        <p>SOI</p>
-      </div>
+
     </div>
   </div>
 </nav>
 
-<!-- <div class="scrollMenu container-fluid" style="    position: absolute;
-bottom: 0px;
-width: 102%;
-margin-bottom: -9px;">
-  <div class="row flex-nowrap">
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-    <div class="col">
-      <i
-        class="icono fa fa-align-justify fa-2x icono-id"
-        aria-hidden="true"
-      ></i>
-      <p>SOI</p>
-    </div>
-  </div>
-</div> -->
+
 
 
