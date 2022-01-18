@@ -1,0 +1,21 @@
+<div class="container-fluid padre">
+    <div class="container-fluid carta" *ngFor="let card of cards">
+      <div class="row">
+        <div class="col-4">
+          <p class="titulo-carta">{{card.nombre}}</p>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">Unidades</p>
+          <p class="money">{{card.moneyUnid}}</p>
+          <p class="subtitulo2">Contribución</p>
+          <p class="money">{{card.moneyCont}}</p>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">Venta</p>
+          <p class="money">{{card.moneyVenta}}</p>
+          <p class="subtitulo2">Margen</p>
+          <p class="money">{{card.moneyMargen}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
