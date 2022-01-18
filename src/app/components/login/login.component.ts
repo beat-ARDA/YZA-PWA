@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   }
 
   private checkCredentials(signInForm: boolean) {
-    console.log("si funciona");
     const signInData = signInForm;
     this.authenticationService.authenticate(signInData)
 }

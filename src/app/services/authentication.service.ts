@@ -11,11 +11,9 @@ export class AuthenticationService {
   constructor(private router: Router) { }
 
   authenticate(signInData: boolean): boolean {
-    console.log(signInData);
 
     if (signInData == true) {
       this.isAuthenticated = true;
-      console.log("si sirve");
 
       this.router.navigate(['home']);
       return true;

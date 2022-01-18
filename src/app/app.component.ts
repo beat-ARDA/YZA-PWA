@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthenticationService } from './services/authentication.service';
 
 @Component({
@@ -8,8 +9,14 @@ import { AuthenticationService } from './services/authentication.service';
 })
 export class AppComponent {
   title = 'YZA-PWA';
+  public url = "";
+  constructor(
+    public authenticationService: AuthenticationService,
+    private router: Router) { }
 
-  constructor(public authenticationService: AuthenticationService) { }
+  ngDoCheck() {
+    this.url = this.router.url;
+  }
 
   logout() {
     this.authenticationService.logout();
