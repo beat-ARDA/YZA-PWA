@@ -1,6 +1,20 @@
-<body>
-<div class="box"></div> 
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-</body>
+<div class="container-fluid padre">
+  <div class="container-fluid carta" *ngFor="let card of cards">
+    <div class="row">
+      <div class="col-4">
+        <p class="titulo-carta">{{card.nombre}}</p>
+        <div class="icono-carta" [ngStyle]="{'background-image': 'url(' + card.icono + ')'}"></div>
+      </div>
+      <div class="col-4">
+        <p class="subtitulo">P4</p>
+        <p class="money">{{card.moneyP4}}</p>
+        <p class="var">Var</p>
+      </div>
+      <div class="col-4">
+        <p class="subtitulo">P11</p>
+        <p class="money">{{card.moneyP11}}</p>
+        <p class="var-money">{{card.moneyVar}}</p>
+      </div>
+    </div>
+  </div>
+</div>

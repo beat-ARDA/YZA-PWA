@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 html {
     font-size: 16px;
+    background-color: #F7F9FC;
 }
 
 @font-face {
@@ -16,4 +17,9 @@ html {
 @font-face {
     font-family: lato-medium;
     src: url(assets/fonts/Lato-Medium.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url(assets/fonts/Lato-Bold.ttf) format("opentype");
 }

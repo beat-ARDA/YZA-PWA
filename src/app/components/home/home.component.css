@@ -1,8 +1,86 @@
-.box{
-    width: 50%;
-    height: 90px;
-    margin: 2% auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 15px rgb(145, 144, 144);
-  }
+.row {
+  margin: 0rem;
+  padding: 0.75rem;
+}
+
+.col-4 {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.padre {
+  padding-top: 1rem;
+  padding-left: 0.6667rem;
+  padding-right: 0.6667rem;
+  background-color: #F7F9FC;
+}
+
+.carta {
+  padding: 0px;
+  background-color: white;
+  margin-bottom: 1rem;
+  box-shadow: 0rem 0.1667rem 0.3333rem 0rem rgba(188, 202, 224, 0.5);
+  border-radius: 0.3333rem;
+}
+
+.titulo-carta {
+  font-family: 'lato-medium';
+  font-size: 1.4167rem;
+  letter-spacing: -0.0192rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word; 
+}
+
+.icono-carta {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.9167rem;
+  height: 2.9167rem;
+  /* margin-bottom: 0.6667rem; */
+}
+
+.subtitulo {
+  font-family: 'lato-regular';
+  font-size: 1.25rem;
+  letter-spacing: -0.0217rem;
+  color: #546CF1;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0.25rem;
+  overflow-wrap: break-word; 
+}
+
+.money {
+  font-family: 'lato-bold';
+  font-size: 1.1667rem;
+  letter-spacing: -0.0208rem;
+  color: #4E535A;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 1.3333rem;
+  overflow-wrap: break-word; 
+}
+
+.var {
+  font-family: 'lato-regular';
+  font-size: 1.25rem;
+  letter-spacing: -0.0217rem;
+  color: #4E535A;
+  margin: 0px;
+  overflow-wrap: break-word; 
+}
+
+.var-money {
+  font-family: 'lato-heavy';
+  font-size: 1.4167rem;
+  letter-spacing: -0.0192rem;
+  color: #306CF1;
+  margin: 0px;
+  overflow-wrap: break-word; 
+}

@@ -1,0 +1,197 @@
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+    border-top-right-radius: 2.25rem;
+    border-top-left-radius: 2.25rem;
+}
+
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+
+.titulo {
+    font-family: 'lato-bold';
+    font-size: 1.3333rem;
+    color: #313670;
+    line-height: 1.175rem;
+    letter-spacing: 0.035rem;
+    margin-top: 1.775rem;
+    margin-bottom: 1.4917rem;
+    padding: 0px;
+}
+
+.row-titulo {
+    position: relative;
+}
+
+.icono-cerrar {
+    background-image: url('../../../assets/Assets/iOS/ic_cerrar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.row-busqueda {
+    padding-right: 1.6667rem;
+    padding-left: 1.6667rem;
+    position: relative;
+}
+
+.busqueda {
+    font-family: 'lato-heavy';
+    font-size: 1rem;
+    letter-spacing: -0.0133;
+    color: #818080;
+    height: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0rem 0.1667rem 0.1667rem 0rem rgba(0, 0, 0, 0.24);
+    padding-left: 1.5833rem;
+    padding-right: 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.icono-busqueda {
+    background-image: url('../../../assets/Assets/iOS/ic_lupa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.4583rem;
+    height: 1.4583rem;
+    display: inline-block;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.detalle-general {
+    padding-left: 2.3333rem;
+    padding-right: 2.3333rem;
+    padding-top: 1.0833rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.titulo-detalle-general {
+    font-family: 'lato-bold';
+    font-size: 1.3333rem;
+    letter-spacing: -0.0233rem;
+    color: #546CF1;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.subtitulo-detalle-general {
+    font-family: 'lato-bold';
+    font-size: 1.3333rem;
+    letter-spacing: -0.0233rem;
+    color: #4E535A;
+    word-wrap: break-word;
+    margin-top: 0.3333rem;
+    margin-bottom: 0.6667rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+.col-6 {
+    padding: 0;
+    margin: 0;
+}
+
+.col {
+    padding: 0;
+    margin: 0;
+}
+
+.titulos-detalle-producto {
+    margin-left: 1.0833rem;
+    margin-right: 0rem;
+    margin-top: 0.8333rem;
+    margin-bottom: 0rem;
+}
+
+.titulo-detalle-producto {
+    font-family: 'lato-heavy';
+    font-size: 1rem;
+    letter-spacing: -0.0125rem;
+    color: #818080;
+    margin: 0rem;
+    padding: 0rem;
+    display: inline-block;
+}
+
+.titulo-propiedad {
+    font-family: 'lato-regular';
+    font-size: 1rem;
+    letter-spacing: -0.0175rem;
+    color: #546CF1;
+    margin: 0px;
+    padding: 0px;
+}
+
+.segunda-fila {
+    margin-top: 0.8333rem;
+}
+
+.var-propiedad {
+    font-family: 'lato-heavy';
+    font-size: 1rem;
+    letter-spacing: -0.0133rem;
+    color: #434343;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.valor-propiedad {
+    font-family: 'lato-medium';
+    font-size: 1rem;
+    letter-spacing: -0.0175rem;
+    color: #4E535A;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.detalle-productos {}
+
+@media (width > 800px) {
+    .icono-busqueda, .icono-cerrar {
+        left: 92%;
+    }
+}
+
+@media (width < 431px) {
+    .icono-busqueda, .icono-cerrar {
+        width: 1.2rem;
+        height: 1.2rem;
+        left: 80%;
+    }
+
+    .busqueda {
+        font-size: 0.7rem;
+    }
+
+    .titulo {
+        font-size: 1.0rem;
+    }
+
+    .titulo-detalle-general {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .subtitulo-detalle-general {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .detalle-general {
+        margin: 0px;
+    }
+}
