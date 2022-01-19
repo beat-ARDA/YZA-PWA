@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { BebeHomeComponent } from './components/bebe-home/bebe-home.component';
+import { HeaderService } from './services/header.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { BebeHomeComponent } from './components/bebe-home/bebe-home.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeaderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
