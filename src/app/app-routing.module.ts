@@ -8,7 +8,7 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardGuard] },
-  { path: 'resumen', component: CuerpoBusquedaComponent }
+  { path: 'detalles', component: CuerpoBusquedaComponent }
 ];
 
 @NgModule({
