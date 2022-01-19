@@ -31,6 +31,7 @@
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 1.5rem;
+  overflow-wrap: break-word; 
 }
 
 .icono-carta {
@@ -51,6 +52,7 @@
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 0.25rem;
+  overflow-wrap: break-word; 
 }
 
 .money {
@@ -62,6 +64,7 @@
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 1.3333rem;
+  overflow-wrap: break-word; 
 }
 
 .var {
@@ -70,6 +73,7 @@
   letter-spacing: -0.0217rem;
   color: #4E535A;
   margin: 0px;
+  overflow-wrap: break-word; 
 }
 
 .var-money {
@@ -78,4 +82,5 @@
   letter-spacing: -0.0192rem;
   color: #306CF1;
   margin: 0px;
+  overflow-wrap: break-word; 
 }
