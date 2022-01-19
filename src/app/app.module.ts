@@ -7,7 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-busqueda.component';
+import { BebeHomeComponent } from './components/bebe-home/bebe-home.component';
+import { HeaderService } from './services/header.service';
+import { MenuPruebaComponent } from './components/menu-prueba/menu-prueba.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
     MenuComponent,
     HeaderComponent,
     HomeComponent,
-    CuerpoBusquedaComponent,
+    BebeHomeComponent,
+    MenuPruebaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeaderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

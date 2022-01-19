@@ -12,23 +12,96 @@
     /*justify-content: center !important;
   }*/
   
-  /*.icons{
-    color: black;
-    padding: 14px 16px;
-    /*font-size: 15px;
-    display: inline-block;
-    text-align: center;
-  }*/
+  .navbar-brand{
+    margin: 1rem !important;
+  }
 
-  /* a{
-    display: inline-block;
-    color: white;
+  /*este estilo es para centrar las columnas*/
+.mx-auto{
+  margin-left: 0 !important;
+}
+
+  .iconoSoi{
+    /* margin-right: 0.8333rem; */
+     height: 1.5rem !important;
+    width: 1.5rem !important;
+    /* margin-left: 2.4167rem; */
+    /* padding-top: 1.3333rem; */
+    /* font-size: 15px; */
+    text-align: center !important;
+  }
+
+  .iconobb{
+    height:1.6rem !important;
+    text-align: center !important;
+    /* margin-left: 1.25rem; */
+  }
+
+  .iconoFarma{
+    width: 1.5833rem !important;
+    height: 1.5833rem !important;
+    text-align: center !important;
+    /* margin-left: 1.25rem; */
+  }
+
+  .iconoAc{
+    text-align: center !important;
+    width: 1.75rem !important;
+    height: 1.6667rem !important;
+    /* margin-left: 1.25rem; */
+  }
+
+  .iconoHcp{
+    text-align: center !important;
+    width: 1.5rem !important;
+    height: 1.6667rem !important;
+    /* margin-left: 1.25rem; */
+  }
+
+
+
+  /* .alinearItem{
     text-align: center;
-    padding: 14px;
+    margin: auto;
+  } */
+
+  /* .iconoSoiOff{
+    background-image: url('../../../assets/Android/hdpi/ic_soi_off.png');
+    /* background-size: contain; 
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 15px;
+    text-align: center !important; 
+    padding-left: 20px; 
+    padding-right: 20px;
+  }
+
+  .iconoSoiOn{
+    background-image: url('../../../assets/Android/hdpi/ic_soi_on.png');
+     background-size: contain; 
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 15px;
+    text-align: center !important;
+    padding-left: 20px; 
+    padding-right: 20px;
+    
+  }  */
+
+   .nombre{
+    display:block;
+    color: #222831;
+    font-family: 'lato-regular';
+    text-align: center !important;
+     /* padding: 2px;  */
     text-decoration: none;
   }
 
-  a:hover{
+  .verdeNombre{
+    color: #46a100;
+  }
+
+ /* a:hover{
     background-color: aqua;
   } */
 
@@ -44,18 +117,7 @@
     padding-bottom: 10.6667rem;*/
 }
   
-   .etiqueta {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-  }
-  
-  .etiqueta:hover {
-    background-color: #777;
-  }
+ 
+   
 
-  .icono{
-    color: #222831;
-  }
+ 
