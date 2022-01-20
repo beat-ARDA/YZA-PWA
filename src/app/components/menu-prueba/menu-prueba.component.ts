@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MenuPruebaComponent implements OnInit {
   comp:boolean;
   por:boolean;
-  var:boolean;
+  variacion:boolean;
   constructor() {
     this.comp=false;
     this.por=false;
-    this.var=false;
+    this.variacion=false;
    }
 
   ngOnInit(): void {
@@ -31,11 +31,11 @@ export class MenuPruebaComponent implements OnInit {
     else if(icono != 'POR'){
       this.por= false
     }
-    if(icono == 'VAR'){
-      this.var= true
+    if(icono == 'VARI'){
+      this.variacion= true
     }
-    else if(icono != 'VAR'){
-      this.var= false
+    else if(icono != 'VARI'){
+      this.variacion= false
     }
 
   }

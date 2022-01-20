@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BebeHomeComponent } from './components/bebe-home/bebe-home.component';
 import { HeaderService } from './services/header.service';
 import { MenuPruebaComponent } from './components/menu-prueba/menu-prueba.component';
+import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-busqueda.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MenuPruebaComponent } from './components/menu-prueba/menu-prueba.compon
     HomeComponent,
     BebeHomeComponent,
     MenuPruebaComponent,
+    CuerpoBusquedaComponent
   ],
   imports: [
     BrowserModule,
