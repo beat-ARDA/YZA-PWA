@@ -8,9 +8,9 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuardGuard] },
-  { path: 'bebe-home', component: BebeHomeComponent, canActivate: [AuthGuardGuard] },
-  { path: 'detalles', component:CuerpoBusquedaComponent, canActivate: [AuthGuardGuard]}
+  { path: 'home', component: HomeComponent },
+  { path: 'home/:name', component: BebeHomeComponent },
+  { path: 'detalles', component: CuerpoBusquedaComponent }
 
 ];
 
