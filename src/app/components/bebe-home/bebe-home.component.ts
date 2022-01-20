@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bebe-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BebeHomeComponent implements OnInit {
   cards: any;
-  constructor() { 
+  constructor(private _router: Router) {
     this.cards = [
       {
         nombre: 'Toallas Humedas',
@@ -45,6 +46,14 @@ export class BebeHomeComponent implements OnInit {
         moneyMargen: '10%'
       }
     ];
+  }
+
+  IrDetalles() {
+    this._router.navigate(['/', 'detalles']).then(nav => {
+      console.log(nav); // true if navigation is successful
+    }, err => {
+      console.log(err) // when there's an error
+    });
   }
 
   ngOnInit(): void {

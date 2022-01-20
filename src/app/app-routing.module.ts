@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardGuard] },
   { path: 'bebe-home', component: BebeHomeComponent, canActivate: [AuthGuardGuard] },
-  { path: 'cuerpo-busqueda', component:CuerpoBusquedaComponent, canActivate: [AuthGuardGuard]}
+  { path: 'detalles', component:CuerpoBusquedaComponent, canActivate: [AuthGuardGuard]}
 
 ];
 
