@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,58 +6,57 @@ import { HeaderService } from 'src/app/services/header.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-    soi: boolean;
-    bb: boolean;
-    farma: boolean;
-    ac:boolean;
-    hcp:boolean;
-  constructor(private header: HeaderService) { 
-    this.soi= false;
-    this.bb= false;
-    this.farma= false;
-    this.ac=false;
-    this.hcp= false;
+  soi: boolean;
+  bb: boolean;
+  farma: boolean;
+  ac: boolean;
+  hcp: boolean;
+  constructor() {
+    this.soi = false;
+    this.bb = false;
+    this.farma = false;
+    this.ac = false;
+    this.hcp = false;
 
   }
 
   ngOnInit(): void {
   }
 
-  cambioIcono(icono:string){
-    if(icono == 'SOI'){
-      this.soi= true
-      this.header.changeMessage('SOI');
+  cambioIcono(icono: string) {
+    if (icono == 'SOI') {
+      this.soi = true
     }
-    else if(icono != 'SOI'){
-      this.soi= false
+    else if (icono != 'SOI') {
+      this.soi = false
     }
-    if(icono == 'BEBE'){
-      this.bb=true
-      this.header.changeMessage('RESUMEN BEBE');
+    if (icono == 'BEBE') {
+      this.bb = true
+
     }
-    else if(icono != 'BEBE'){
-      this.bb= false
+    else if (icono != 'BEBE') {
+      this.bb = false
     }
-    if(icono == 'FARMA'){
-      this.farma= true
-      this.header.changeMessage('RESUMEN FARMA');
+    if (icono == 'FARMA') {
+      this.farma = true
+
     }
-    else if(icono != 'FARMA'){
-      this.farma= false
+    else if (icono != 'FARMA') {
+      this.farma = false
     }
-    if(icono == 'AC'){
-      this.ac= true
-      this.header.changeMessage('RESUMEN FARMA AC');
+    if (icono == 'AC') {
+      this.ac = true
+
     }
-    else if(icono != 'AC'){
-      this.ac= false
+    else if (icono != 'AC') {
+      this.ac = false
     }
-    if(icono == 'HCP'){
-      this.hcp= true
-      this.header.changeMessage('RESUMEN HCP');
+    if (icono == 'HCP') {
+      this.hcp = true
+
     }
-    else if(icono != 'HCP'){
-      this.hcp= false
+    else if (icono != 'HCP') {
+      this.hcp = false
     }
 
   }
