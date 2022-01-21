@@ -1,14 +1,14 @@
-<div *ngIf="url !== '/detalles'" class="menu-padre">
+<div class="menu-padre">
   <div (click)="clickItem(item.nombre)" class="item" *ngFor="let item of items">
     <img *ngIf="!item.activado" class="icono-soi" src="{{item.iconoNoSelec}}" />
     <img *ngIf="item.activado" class="icono-soi" src="{{item.iconoSelec}}" />
     <p class="texto-icono">{{item.nombre}}</p>
   </div>
 </div>
-<div *ngIf="url == '/detalles'" class="menu-padre">
+<!-- <div *ngIf="url == '/detalles'" class="menu-padre">
   <div (click)="clickItem(item.nombre)" class="item" *ngFor="let item of items">
     <img *ngIf="!item.activado" class="icono-soi" src="{{item.iconoNoSelec}}" />
     <img *ngIf="item.activado" class="icono-soi" src="{{item.iconoSelec}}" />
     <p class="texto-icono">{{item.nombre}}</p>
   </div>
-</div>
+</div> -->
