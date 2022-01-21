@@ -49,11 +49,7 @@ export class BebeHomeComponent implements OnInit {
   }
 
   IrDetalles() {
-    this._router.navigate(['/', 'detalles']).then(nav => {
-      console.log(nav); // true if navigation is successful
-    }, err => {
-      console.log(err) // when there's an error
-    });
+    this._router.navigate(['/', 'detalles']);
   }
 
   ngOnInit(): void {

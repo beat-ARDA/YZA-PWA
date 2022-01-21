@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ItemMenu } from 'src/app/models/ItemMenu';
 import { Router } from '@angular/router';
 
@@ -14,11 +14,11 @@ export class MenuComponent implements OnInit {
 
   constructor(private _router: Router) {
     this.items = [
-      new ItemMenu(false, "SOI", "../../../assets/Android/hdpi/ic_soi_on.png", "../../../assets/Android/hdpi/ic_soi_off.png"),
-      new ItemMenu(false, "Bebe", "../../../assets/Android/hdpi/ic_bb_on.png", "../../../assets/Android/hdpi/ic_bb_off.png"),
-      new ItemMenu(false, "Farma", "../../../assets/Android/hdpi/ic_farma_on.png", "../../../assets/Android/hdpi/ic_farma_off.png"),
-      new ItemMenu(false, "Farma AC", "../../../assets/Android/hdpi/ic_farma_ac_on.png", "../../../assets/Android/hdpi/ic_farma_ac_off.png"),
-      new ItemMenu(false, "EVO Farma", "../../../assets/Android/hdpi/ic_evo_farma_on.png", "../../../assets/Android/hdpi/ic_evo_farma_off.png")
+      new ItemMenu("SOI", false, "SOI", "../../../assets/Android/hdpi/ic_soi_on.png", "../../../assets/Android/hdpi/ic_soi_off.png"),
+      new ItemMenu("RESUMEN BEBE", false, "Bebe", "../../../assets/Android/hdpi/ic_bb_on.png", "../../../assets/Android/hdpi/ic_bb_off.png"),
+      new ItemMenu("RESUMEN FARMA", false, "Farma", "../../../assets/Android/hdpi/ic_farma_on.png", "../../../assets/Android/hdpi/ic_farma_off.png"),
+      new ItemMenu("RESUMEN FARMA AC", false, "Farma AC", "../../../assets/Android/hdpi/ic_farma_ac_on.png", "../../../assets/Android/hdpi/ic_farma_ac_off.png"),
+      new ItemMenu("RESUMEN EVO FARMA", false, "EVO Farma", "../../../assets/Android/hdpi/ic_evo_farma_on.png", "../../../assets/Android/hdpi/ic_evo_farma_off.png")
     ];
     this.items[0].activado = true;
     this.ultimoElemento = this.items[0].nombre;
@@ -37,6 +37,7 @@ export class MenuComponent implements OnInit {
         else if (item.nombre == _item) {
           item.activado = true;
           index == 0 ? router.navigate(['/home']) : router.navigate(['/home', item.nombre]);
+         
         }
       });
       this.ultimoElemento = _item;
