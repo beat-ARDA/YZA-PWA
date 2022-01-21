@@ -1,46 +1,7 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  <div class="scrollMenu container-fluid" style="    position: absolute;
-  bottom: 0px;
-  height: 4.9167rem;
-  width: 100%;
- overflow-y: hidden;">
-    <div class="navbar-brand" href="#"></div>
-    <div class="row flex-nowrap  mx-auto">
-      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('SOI')">
-        <img class="iconoSoi"
-          src="{{soi ? '../../../assets/Android/hdpi/ic_soi_on.png': '../../../assets/Android/hdpi/ic_soi_off.png'}}"
-          [routerLink]="['/home']" />
-        <p class="nombre">SOI</p>
-      </div>
-
-      <div class="col-3 justify-content-center text-center" (click)="cambioIcono('BEBE')">
-        <img class="iconobb"
-          src="{{bb ? '../../../assets/Android/hdpi/ic_bb_on.png': '../../../assets/Android/hdpi/ic_bb_off.png'}}"
-          [routerLink]="['/home', 'bebe']" />
-        <p class="nombre">Bebé</p>
-      </div>
-
-      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('FARMA')">
-        <img class="iconoFarma"
-          src="{{farma ? '../../../assets/Android/hdpi/ic_farma_on.png': '../../../assets/Android/hdpi/ic_farma_off.png'}}"
-          [routerLink]="['/home', 'farma']" />
-        <p class="nombre">Farma</p>
-      </div>
-
-      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('AC')">
-        <img class="iconoAc"
-          src="{{ac ? '../../../assets/Android/hdpi/ic_farma_ac_on.png': '../../../assets/Android/hdpi/ic_farma_ac_off.png'}}"
-          [routerLink]="['/home', 'ac']" />
-        <p class="nombre">Farma AC</p>
-      </div>
-
-      <div class="col-3  justify-content-center text-center" (click)="cambioIcono('HCP')">
-        <img class="iconoHcp"
-          src="{{hcp ? '../../../assets/Android/hdpi/ic_evo_farma_on.png': '../../../assets/Android/hdpi/ic_evo_farma_off.png'}}"
-          [routerLink]="['/home', 'hcp']" />
-        <p class="nombre">HCP</p>
-      </div>
-
-    </div>
+<div class="menu-padre">
+  <div (click)="clickItem(item.nombre)" class="item" *ngFor="let item of items">
+    <img *ngIf="!item.activado" class="icono-soi" src="{{item.iconoNoSelec}}" />
+    <img *ngIf="item.activado" class="icono-soi" src="{{item.iconoSelec}}" />
+    <p class="texto-icono">{{item.nombre}}</p>
   </div>
-</nav>
+</div>
