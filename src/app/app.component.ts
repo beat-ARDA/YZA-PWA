@@ -14,5 +14,6 @@ export class AppComponent {
 
   ngDoCheck() {
     this.url = this.router.url;
+    
   }
 }
