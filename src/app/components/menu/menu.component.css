@@ -1,4 +1,3 @@
-
 /*.navbar {
   /*max-width: 100%;
   background-color: white;
@@ -11,61 +10,61 @@
     box-shadow: 0px -2px lightgray !important;
     /*justify-content: center !important;
   }*/
-  
-  .navbar-brand{
-    margin: 1rem !important;
-  }
 
-  /*este estilo es para centrar las columnas*/
-.mx-auto{
+.navbar-brand {
+  margin: 1rem !important;
+}
+
+/*este estilo es para centrar las columnas*/
+.mx-auto {
   margin-left: 0 !important;
 }
 
-  .iconoSoi{
-    /* margin-right: 0.8333rem; */
-     height: 1.5rem !important;
-    width: 1.5rem !important;
-    /* margin-left: 2.4167rem; */
-    /* padding-top: 1.3333rem; */
-    /* font-size: 15px; */
-    text-align: center !important;
-  }
+.iconoSoi {
+  /* margin-right: 0.8333rem; */
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  /* margin-left: 2.4167rem; */
+  /* padding-top: 1.3333rem; */
+  /* font-size: 15px; */
+  text-align: center !important;
+}
 
-  .iconobb{
-    height:1.6rem !important;
-    text-align: center !important;
-    /* margin-left: 1.25rem; */
-  }
+.iconobb {
+  height: 1.6rem !important;
+  text-align: center !important;
+  /* margin-left: 1.25rem; */
+}
 
-  .iconoFarma{
-    width: 1.5833rem !important;
-    height: 1.5833rem !important;
-    text-align: center !important;
-    /* margin-left: 1.25rem; */
-  }
+.iconoFarma {
+  width: 1.5833rem !important;
+  height: 1.5833rem !important;
+  text-align: center !important;
+  /* margin-left: 1.25rem; */
+}
 
-  .iconoAc{
-    text-align: center !important;
-    width: 1.75rem !important;
-    height: 1.6667rem !important;
-    /* margin-left: 1.25rem; */
-  }
+.iconoAc {
+  text-align: center !important;
+  width: 1.75rem !important;
+  height: 1.6667rem !important;
+  /* margin-left: 1.25rem; */
+}
 
-  .iconoHcp{
-    text-align: center !important;
-    width: 1.5rem !important;
-    height: 1.6667rem !important;
-    /* margin-left: 1.25rem; */
-  }
+.iconoHcp {
+  text-align: center !important;
+  width: 1.5rem !important;
+  height: 1.6667rem !important;
+  /* margin-left: 1.25rem; */
+}
 
 
 
-  /* .alinearItem{
+/* .alinearItem{
     text-align: center;
     margin: auto;
   } */
 
-  /* .iconoSoiOff{
+/* .iconoSoiOff{
     background-image: url('../../../assets/Android/hdpi/ic_soi_off.png');
     /* background-size: contain; 
     width: 1.5rem;
@@ -88,36 +87,31 @@
     
   }  */
 
-   .nombre{
-    display:block;
-    color: #222831;
-    font-family: 'lato-regular';
-    text-align: center !important;
-     /* padding: 2px;  */
-    text-decoration: none;
-  }
+.nombre {
+  display: block;
+  color: #222831;
+  font-family: 'lato-regular';
+  text-align: center !important;
+  /* padding: 2px;  */
+  text-decoration: none;
+}
 
-  .verdeNombre{
-    color: #46a100;
-  }
+.verdeNombre {
+  color: #46a100;
+}
 
- /* a:hover{
+/* a:hover{
     background-color: aqua;
   } */
 
-  .scrollMenu {
-    width: auto;
-    height: auto;
-    background-color: #F7F9FC;
-    overflow: auto;
-    white-space: nowrap;
-    box-shadow: 0px -2px lightgray;
-    /*position: fixed;
+.scrollMenu {
+  width: auto;
+  height: auto;
+  background-color: #F7F9FC;
+  overflow: auto;
+  white-space: nowrap;
+  box-shadow: 0px -2px lightgray;
+  /*position: fixed;
     bottom: 0;  
     padding-bottom: 10.6667rem;*/
 }
-  
- 
-   
-
- 
