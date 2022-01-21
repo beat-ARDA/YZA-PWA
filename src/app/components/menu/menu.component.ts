@@ -18,7 +18,6 @@ export class MenuComponent implements OnInit {
     this.url ="/home";
     this._router.events.subscribe((val) => {
       console.log(val);
-      
     })
     this.items = [
       new ItemMenu("SOI", false, "SOI", "../../../assets/Android/hdpi/ic_soi_on.png", "../../../assets/Android/hdpi/ic_soi_off.png"),
@@ -43,7 +42,7 @@ export class MenuComponent implements OnInit {
     this.url = this._router.url;
     let _ultimoElemento = this.ultimoElemento;
     let router = this._router;
-    if (this.ultimoElemento !== _item && this.url !== '/detalles') {
+    if (this.ultimoElemento !== _item) {
       this.items.map((item, index) => {
         if (item.nombre == _ultimoElemento)
           item.activado = false;
