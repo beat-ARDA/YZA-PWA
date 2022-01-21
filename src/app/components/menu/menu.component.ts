@@ -10,12 +10,24 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   public items: Array<ItemMenu>;
+  public itemsDetalles: Array<ItemMenu>;
   public ultimoElemento: string;
+  public url: string;
 
   constructor(private _router: Router) {
+    this.url ="/home";
+    this._router.events.subscribe((val) => {
+      console.log(val);
+      
+    })
     this.items = [
       new ItemMenu("SOI", false, "SOI", "../../../assets/Android/hdpi/ic_soi_on.png", "../../../assets/Android/hdpi/ic_soi_off.png"),
       new ItemMenu("RESUMEN BEBE", false, "Bebe", "../../../assets/Android/hdpi/ic_bb_on.png", "../../../assets/Android/hdpi/ic_bb_off.png"),
+      new ItemMenu("RESUMEN FARMA", false, "Farma", "../../../assets/Android/hdpi/ic_farma_on.png", "../../../assets/Android/hdpi/ic_farma_off.png"),
+      new ItemMenu("RESUMEN FARMA AC", false, "Farma AC", "../../../assets/Android/hdpi/ic_farma_ac_on.png", "../../../assets/Android/hdpi/ic_farma_ac_off.png"),
+      new ItemMenu("RESUMEN EVO FARMA", false, "EVO Farma", "../../../assets/Android/hdpi/ic_evo_farma_on.png", "../../../assets/Android/hdpi/ic_evo_farma_off.png")
+    ];
+    this.itemsDetalles = [
       new ItemMenu("RESUMEN FARMA", false, "Farma", "../../../assets/Android/hdpi/ic_farma_on.png", "../../../assets/Android/hdpi/ic_farma_off.png"),
       new ItemMenu("RESUMEN FARMA AC", false, "Farma AC", "../../../assets/Android/hdpi/ic_farma_ac_on.png", "../../../assets/Android/hdpi/ic_farma_ac_off.png"),
       new ItemMenu("RESUMEN EVO FARMA", false, "EVO Farma", "../../../assets/Android/hdpi/ic_evo_farma_on.png", "../../../assets/Android/hdpi/ic_evo_farma_off.png")
@@ -28,16 +40,16 @@ export class MenuComponent implements OnInit {
   }
 
   clickItem(_item: string) {
+    this.url = this._router.url;
     let _ultimoElemento = this.ultimoElemento;
     let router = this._router;
-    if (this.ultimoElemento !== _item) {
+    if (this.ultimoElemento !== _item && this.url !== '/detalles') {
       this.items.map((item, index) => {
         if (item.nombre == _ultimoElemento)
           item.activado = false;
         else if (item.nombre == _item) {
           item.activado = true;
           index == 0 ? router.navigate(['/home']) : router.navigate(['/home', item.nombre]);
-         
         }
       });
       this.ultimoElemento = _item;

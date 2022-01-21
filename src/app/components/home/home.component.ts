@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   cards: any;
-  
+
   constructor() {
     this.cards = [
       {
@@ -42,6 +42,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-   }
+
+  }
 }
