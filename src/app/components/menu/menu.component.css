@@ -33,3 +33,17 @@ p {
   line-height: 1.5rem;
   color: #393E46;
 }
+
+.iconoDet{
+  height: 1.5rem;
+  width: 1.5rem;
+  color: red;
+  margin-bottom: 0.5rem;
+  margin-left: 5rem;
+}
+
+.itemDet{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
