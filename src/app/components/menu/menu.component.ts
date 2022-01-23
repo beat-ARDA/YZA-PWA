@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   public url: string;
 
   constructor(private _router: Router) {
-    this.url ="/home";
+    this.url = "/home";
     this._router.events.subscribe((val) => {
       console.log(val);
     })
