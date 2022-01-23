@@ -17,14 +17,14 @@ export class MenuComponent implements OnInit {
   ngDoCheck() {
     this.url = this._router.url;
     console.log(this.url, 'hola');
-    
+
   }
   constructor(private _router: Router) {
     this.url = "/home";
     this._router.events.subscribe((val) => {
       console.log(val);
     })
-    
+
     this.items = [
       new ItemMenu("SOI", false, "SOI", "../../../assets/Android/hdpi/ic_soi_on.png", "../../../assets/Android/hdpi/ic_soi_off.png"),
       new ItemMenu("RESUMEN BEBE", false, "Bebe", "../../../assets/Android/hdpi/ic_bb_on.png", "../../../assets/Android/hdpi/ic_bb_off.png"),
@@ -37,8 +37,8 @@ export class MenuComponent implements OnInit {
       new ItemMenu("PORCENTAJES", false, "Porcentajes", "../../../assets/Android/hdpi/ic_porcentajes_on.png", "../../../assets/Android/hdpi/ic_porcentajes_off.png"),
       new ItemMenu("VARIACION", false, "Variación $$-%", "../../../assets/Android/hdpi/ic_variacion_on.png", "../../../assets/Android/hdpi/ic_variacion_off.png")
     ];
-    this.items[0].activado  = true;
-    this.ultimoElemento = this.url=== '/detalles'?this.itemsDetalles[0].nombre: this.items[0].nombre;
+    this.items[0].activado = true;
+    this.ultimoElemento = this.url === '/detalles' ? this.itemsDetalles[0].nombre : this.items[0].nombre;
   }
 
   ngOnInit(): void {
@@ -60,8 +60,6 @@ export class MenuComponent implements OnInit {
       this.ultimoElemento = _item;
     }
   }
-
-  
 }
 
 
