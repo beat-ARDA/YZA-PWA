@@ -30,7 +30,14 @@ p {
   font-family: 'lato-medium';
   font-size: 1.0833rem;
   line-height: 1.5rem;
+}
+
+.texto-icono-noSelect {
   color: #393E46;
+}
+
+.texto-icono-select {
+  color: #46A101;
 }
 
 .itemDet {

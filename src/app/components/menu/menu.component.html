@@ -1,32 +1,17 @@
-<!-- <div *ngIf="urlDetalles !== 'detalles'" class="menu-padre">
-  <div (click)="ClickItemMenuPrincipal(item.nombre)" class="item" *ngFor="let item of items">
-    <img *ngIf="!item.activado" class="icono" src="{{item.iconoNoSelec}}" />
-    <img *ngIf="item.activado" class="icono" src="{{item.iconoSelec}}" />
-    <p class="texto-icono">{{item.nombre}}</p>
-  </div>
-</div>
-
-<div *ngIf="urlDetalles == 'detalles'" class="menu-padre">
-  <div (click)="ClickItemMenuPrincipal(item.nombre)" class="itemDet" *ngFor="let item of itemsDetalles">
-    <img *ngIf="!item.activado" class="icono" src="{{item.iconoNoSelec}}" />
-    <img *ngIf="item.activado" class="icono" src="{{item.iconoSelec}}" />
-    <p class="texto-icono">{{item.nombre}}</p>
-  </div>
-</div> -->
 <div *ngIf="urlDetalles !== 'detalles'" class="menu-padre">
   <div class="item" *ngFor="let item of items">
-    <img [routerLink]="['/home', item.url]" *ngIf="item.url !== titulo" class="icono"
-      src="{{item.iconoNoSelec}}" />
+    <img [routerLink]="['/home', item.url]" *ngIf="item.url !== titulo" class="icono" src="{{item.iconoNoSelec}}" />
     <img *ngIf="item.url == titulo" class="icono" src="{{item.iconoSelec}}" />
-    <p class="texto-icono">{{item.nombre}}</p>
+    <p class="texto-icono" [ngClass]="item.url == titulo ? 'texto-icono-select' : 'texto-icono-noSelect'">
+      {{item.nombre}}</p>
   </div>
 </div>
 
 <div *ngIf="urlDetalles == 'detalles'" class="menu-padre">
   <div class="itemDet" *ngFor="let item of itemsDetalles">
-    <img [routerLink]="['/detalles', item.url]" *ngIf="item.url !== titulo" class="icono"
-      src="{{item.iconoNoSelec}}" />
+    <img [routerLink]="['/detalles', item.url]" *ngIf="item.url !== titulo" class="icono" src="{{item.iconoNoSelec}}" />
     <img *ngIf="item.url == titulo" class="icono" src="{{item.iconoSelec}}" />
-    <p class="texto-icono">{{item.nombre}}</p>
+    <p class="texto-icono" [ngClass]="item.url == titulo ? 'texto-icono-select' : 'texto-icono-noSelect'">
+      {{item.nombre}}</p>
   </div>
 </div>

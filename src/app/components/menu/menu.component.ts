@@ -12,7 +12,6 @@ export class MenuComponent implements OnInit {
   @Input() titulo: string;
   public items: Array<ItemMenu>;
   public itemsDetalles: Array<ItemMenu>;
-  public ultimoElemento: string;
 
   constructor() {
 
@@ -33,26 +32,8 @@ export class MenuComponent implements OnInit {
     this.urlDetalles = "";
     this.url = "";
     this.titulo = "";
-    this.ultimoElemento = "";
   }
 
   ngOnInit(): void {
-    this.ultimoElemento = this.url.split("/")[2];
   }
-
-  // ClickItemMenuPrincipal(_item: string) {
-  //   let _ultimoElemento = this.ultimoElemento;
-  //   let router = this._router;
-  //   if (this.ultimoElemento !== _item) {
-  //     this.items.map((item) => {
-  //       if (item.nombre == _ultimoElemento)
-  //         item.activado = false;
-  //       else if (item.nombre == _item) {
-  //         item.activado = true;
-  //         router.navigate(['/home', item.nombre]);
-  //       }
-  //     });
-  //     this.ultimoElemento = _item;
-  //   }
-  // }
 }
