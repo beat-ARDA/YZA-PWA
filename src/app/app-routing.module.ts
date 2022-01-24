@@ -7,7 +7,7 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home/SOI', component: HomeComponent },
+  { path: 'home/Soi', component: HomeComponent },
   { path: 'home/:name', component: BebeHomeComponent },
   { path: 'detalles/:name', component: CuerpoBusquedaComponent }
 ];

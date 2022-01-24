@@ -1,5 +1,5 @@
 <div class="container-fluid padre">
-  <div class="container-fluid carta" *ngFor="let card of cards" (click)="IrDetalles()">
+  <div class="container-fluid carta" *ngFor="let card of cards" [routerLink]="['/detalles', 'Comportamiento']">
     <div class="row">
       <div class="col-3">
         <p class="titulo-carta">{{card.nombre}}</p>

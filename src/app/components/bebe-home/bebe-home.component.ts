@@ -48,10 +48,6 @@ export class BebeHomeComponent implements OnInit {
     ];
   }
 
-  IrDetalles() {
-    this._router.navigate(['/detalles', 'COMPORTAMIENTO']);
-  }
-
   ngOnInit(): void {
   }
 

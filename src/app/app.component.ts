@@ -22,8 +22,10 @@ export class AppComponent implements OnDestroy {
       if (event instanceof NavigationEnd) {
         this.url = event.url;
         this.urlDetalles = event.url.split("/")[1];
-        let urlArray = event.url.split("/")[2].replace("%20", " ");
-        this.urlTitulo = urlArray.toString();
+        if (event.url.split("/").length > 2){
+          let urlArray = event.url.split("/")[2].replace("%20", " ");
+          this.urlTitulo = urlArray.toString();
+        }
       }
     });
   }
