@@ -1,3 +1,3 @@
-<app-header *ngIf="url !== '/' && url !== '/detalles'" class="caja"></app-header>
+<app-header *ngIf="urlDetalles !== '' && urlDetalles !== 'detalles'" class="caja"></app-header>
 <router-outlet></router-outlet>
-<app-menu *ngIf="url !== '/'"></app-menu>
+<app-menu [urlDetalles]="urlDetalles" [url]="url" *ngIf="urlDetalles !== ''"></app-menu>

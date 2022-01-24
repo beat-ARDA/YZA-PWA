@@ -20,10 +20,9 @@ p {
   text-align: center;
 }
 
-.icono-soi {
+.icono {
   height: 1.5rem;
   width: 1.5rem;
-  color: red;
   margin-bottom: 0.5rem;
 }
 
@@ -34,16 +33,14 @@ p {
   color: #393E46;
 }
 
-.iconoDet{
-  height: 1.5rem;
-  width: 1.5rem;
-  color: red;
-  margin-bottom: 0.5rem;
-  margin-left: 5rem;
+.itemDet {
+  display: inline-block;
+  width: 33.3333%;
+  text-align: center;
 }
 
-.itemDet{
-  display: inline-block;
-  width: 30%;
-  text-align: center;
+@media (width < 430px) {
+  .texto-icono {
+    font-size: 0.7rem;
+  }
 }

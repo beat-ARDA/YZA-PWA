@@ -13,6 +13,6 @@ export class LoginComponent implements OnInit {
   }
 
   Ingresar(){
-    this._router.navigate(['/home']);
+    this._router.navigate(['/home/SOI']);
   }
 }

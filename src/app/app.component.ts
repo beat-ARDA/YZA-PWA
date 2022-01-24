@@ -1,19 +1,30 @@
-import { Component, DoCheck } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnDestroy } from '@angular/core';
+import { Router, Event as NavigationEvent, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'YZA-PWA';
-  public url = "";
-  constructor(
-    private router: Router) { }
+export class AppComponent implements OnDestroy {
+  public title = 'YZA-PWA';
+  public url: string;
+  public urlDetalles: string;
+  private sub: Subscription;
 
-  ngDoCheck() {
-    this.url = this.router.url;
-    
+  constructor(private router: Router) {
+    this.urlDetalles = "";
+    this.url = "";
+    this.sub = this.router.events.subscribe((event: NavigationEvent) => {
+      if (event instanceof NavigationEnd) {
+        this.url = event.url;
+        this.urlDetalles = event.url.split("/")[1];
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 }
