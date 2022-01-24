@@ -166,7 +166,7 @@
     }
 }
 
-@media (width < 431px) {
+@media (width < 430px) {
     .icono-busqueda, .icono-cerrar {
         width: 1.2rem;
         height: 1.2rem;
@@ -182,16 +182,50 @@
     }
 
     .titulo-detalle-general {
-        font-size: 0.8rem;
+        font-size: 1.0rem;
         margin: 0;
     }
 
     .subtitulo-detalle-general {
-        font-size: 0.8rem;
+        font-size: 1.0rem;
         margin: 0;
     }
 
     .detalle-general {
         margin: 0px;
+    }
+}
+
+@media(width < 370px) {
+    .titulo {
+        font-size: 0.9rem;
+    }
+
+    .busqueda {
+        font-size: 0.7rem;
+    }
+
+    .titulo-detalle-general {
+        font-size: 0.7rem;
+    }
+
+    .subtitulo-detalle-general {
+        font-size: 0.7rem;
+    }
+
+    .titulo-detalle-producto {
+        font-size: 0.6rem;
+    }
+    
+    .titulo-propiedad {
+        font-size: 0.6rem;
+    }
+    
+    .var-propiedad {
+        font-size: 0.6rem;
+    }
+    
+    .valor-propiedad {
+        font-size: 0.6rem;
     }
 }
