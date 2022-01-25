@@ -1,3 +1,7 @@
+html {
+    background-color: #0147CC !important;
+}
+
 .container-fluid {
     margin: 0px;
     padding: 0px;
@@ -216,15 +220,15 @@
     .titulo-detalle-producto {
         font-size: 0.6rem;
     }
-    
+
     .titulo-propiedad {
         font-size: 0.6rem;
     }
-    
+
     .var-propiedad {
         font-size: 0.6rem;
     }
-    
+
     .valor-propiedad {
         font-size: 0.6rem;
     }
