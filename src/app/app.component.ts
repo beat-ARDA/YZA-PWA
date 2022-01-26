@@ -7,6 +7,7 @@ import { concat, Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnDestroy {
   public title = 'YZA-PWA';
   public url: string;
@@ -24,7 +25,8 @@ export class AppComponent implements OnDestroy {
         this.urlDetalles = event.url.split("/")[1];
         if (event.url.split("/").length > 2){
           let urlArray = event.url.split("/")[2].replace("%20", " ");
-          this.urlTitulo = urlArray.toString();
+          this.urlTitulo = decodeURI(urlArray);
+          
         }
       }
     });
