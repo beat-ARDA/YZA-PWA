@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  @Input() urlHome: string;
   cards: any;
-
+  
   constructor() {
+    this.urlHome= '';
     this.cards = [
       {
         nombre: 'Venta',
@@ -39,6 +41,7 @@ export class HomeComponent implements OnInit {
         moneyVar: '30%',
       }
     ];
+
   }
 
   ngOnInit(): void {

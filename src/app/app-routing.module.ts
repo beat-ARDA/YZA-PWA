@@ -5,11 +5,13 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-busqueda.component';
 
+
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home/Soi', component: HomeComponent },
   { path: 'home/:name', component: BebeHomeComponent },
-  { path: 'detalles/:name', component: CuerpoBusquedaComponent }
+  { path: 'detalles/:name', component: CuerpoBusquedaComponent },
+  
 ];
 
 @NgModule({

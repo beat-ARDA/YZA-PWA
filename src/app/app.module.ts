@@ -18,7 +18,8 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
     HeaderComponent,
     HomeComponent,
     BebeHomeComponent,
-    CuerpoBusquedaComponent
+    CuerpoBusquedaComponent,
+  
   ],
   imports: [
     BrowserModule,
