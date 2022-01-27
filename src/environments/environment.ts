@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   API_URL : 'https://localhost:44366',
-  ENDPOINT_GENERALRESUME: '/api/ResumenGeneral',
+  ENDPOINT_PERIOD: '/api/Periodo',
+  ENDPOINT_SOIRESUME: '/api/ResumenGeneral',
   ENDPOINT_CATEGORIES: '/api/Categorias',
   ENDPOINT_ITEMS: '/api/Articulos'
 };

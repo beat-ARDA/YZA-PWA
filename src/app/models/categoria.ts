@@ -1,12 +1,12 @@
 export interface ICategoria {
-    Id: string,
-    CodigoCategoria: string, 
-    NombreCategoria: string, 
-    VariacionMonedaUnidades: number,
-    VariacionMonedaVenta: number, 
-    VariacionMonedaContribucion: number, 
-    VariacionPorcentajeUnidades: number, 
-    VariacionPorcentajeVenta: number, 
-    VariacionPorcentajeContribucion: number, 
-    VariacionPorcentajeMargen: number
+    id: string,
+    codigoCategoria: string, 
+    nombreCategoria: string, 
+    variacionMonedaUnidades: number,
+    variacionMonedaVenta: number, 
+    variacionMonedaContribucion: number, 
+    variacionPorcentajeUnidades: number, 
+    variacionPorcentajeVenta: number, 
+    variacionPorcentajeContribucion: number, 
+    variacionPorcentajeMargen: number
 }

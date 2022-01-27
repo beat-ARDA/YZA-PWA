@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ICategoria } from 'src/app/models/categoria';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -8,50 +9,26 @@ import { CategoryService } from 'src/app/services/category.service';
   styleUrls: ['./bebe-home.component.css']
 })
 export class BebeHomeComponent implements OnInit {
-  cards: any;
-  constructor(private _router: Router, private categoryService: CategoryService) {
-    this.cards = [
-      {
-        nombre: 'Toallas Humedas',
-        moneyUnid: '$ 23.384/ 30%',
-        moneyCont: '$ 834.916/ 142%',
-        moneyVenta: '$ 1.110.450/ 40% ',
-        moneyMargen: '16%'
-      },
-      {
-        nombre: 'Jabón Neutro',
-        moneyUnid: '$ 23.384/ 30%',
-        moneyCont: '$ 834.916/ 142%',
-        moneyVenta: '$ 1.110.450/ 40% ',
-        moneyMargen: '16%'
-      },
-      {
-        nombre: 'Pañales',
-        moneyUnid: '$ 23.384/ 30%',
-        moneyCont: '$ 834.916/ 142%',
-        moneyVenta: '$ 1.110.450/ 40% ',
-        moneyMargen: '16%'
-      },
-      {
-        nombre: 'Biberón',
-        moneyUnid: '$ 47.973/ 754%',
-        moneyCont: '$ 217.976/ 735%',
-        moneyVenta: '$ 500.952/ 542% ',
-        moneyMargen: '10%'
-      },
-      {
-        nombre: 'Shampoo',
-        moneyUnid: '$ 47.973/ 754%',
-        moneyCont: '$ 217.976/ 735%',
-        moneyVenta: '$ 500.952/ 542% ',
-        moneyMargen: '10%'
-      }
-    ];
-  }
+
+  public categories: ICategoria[] = [];
+
+  constructor(
+    private _route: ActivatedRoute,
+    private _categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.categoryService.getCategories("BB").subscribe((categories) => {
-      console.log('categories', categories);
+
+    this._route.params.subscribe((params) => {
+       let typeResume = params['name'];
+
+       if(typeResume)
+        this.getCategories(typeResume);
+    });              
+  }
+
+  getCategories(typeResume: string) {
+    this._categoryService.getCategories(typeResume).subscribe((categories) => {
+      this.categories = categories;  
     })
   }
 
