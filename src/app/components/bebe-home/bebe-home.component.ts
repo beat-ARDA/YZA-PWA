@@ -128,7 +128,7 @@ export class BebeHomeComponent implements OnInit {
         moneyMargen: '18%'
       },
       {
-        nombre: 'Atorvasta...',
+        nombre: 'Atorvastatina',
         moneyUnid: '$ 263/ 7%',
         moneyCont: '$ 23.394/ 5%',
         moneyVenta: '$ 36.220/ 4% ',
@@ -159,7 +159,7 @@ export class BebeHomeComponent implements OnInit {
         moneyMargen: '11%'
       },
       {
-        nombre: 'Acido Acetil...',
+        nombre: 'Acido Acetilsalicilico',
         moneyUnid: '$ 1.861/ 7%',
         moneyCont: '$ 131.824/ 168%',
         moneyVenta: '$ 212.057/ 12% ',
@@ -197,7 +197,7 @@ export class BebeHomeComponent implements OnInit {
         moneyMargen: '4%'
       },
       {
-        nombre: 'Removedor',
+        nombre: 'Removedores',
         moneyUnid: '$ 3.113/ 44%',
         moneyCont: '$ 503.594/ 61%',
         moneyVenta: '$ 638.566/ 40% ',
