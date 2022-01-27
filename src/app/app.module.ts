@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { BebeHomeComponent } from './components/bebe-home/bebe-home.component';
 import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-busqueda.component';
+import { CategoryService } from './services/category.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
   ],

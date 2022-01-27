@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-bebe-home',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class BebeHomeComponent implements OnInit {
   cards: any;
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private categoryService: CategoryService) {
     this.cards = [
       {
         nombre: 'Toallas Humedas',
@@ -49,6 +50,9 @@ export class BebeHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.categoryService.getCategories("BB").subscribe((categories) => {
+      console.log('categories', categories);
+    })
   }
 
 }
