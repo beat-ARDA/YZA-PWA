@@ -1,6 +1,6 @@
 .row {
   margin: 0rem;
-  padding-top: 0.75rem;
+  padding-top: 0rem;
   padding-left: 0.75rem;
   padding-bottom: 0.1667rem;
 }
@@ -33,6 +33,7 @@
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 0px;
+  margin-bottom:0px;
   padding-right: 2rem;
   color: #818080;
 }
