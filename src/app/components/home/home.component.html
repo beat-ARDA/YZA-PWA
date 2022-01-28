@@ -1,23 +1,88 @@
 <div class="container-fluid padre">
-  <div class="container-fluid carta" *ngFor="let card of cards">
-    <div class="row">
-      <div class="col-4">
-        <p class="titulo-carta">{{card.nombre}}</p>
-        <div class="icono-carta" [ngStyle]="{'background-image': 'url(' + card.icono + ')'}"></div>
-      </div>
-      <div class="col-4">
-        <p class="subtitulo">P4</p>
-        <p class="money">{{card.moneyP4}}</p>
-        <p class="var">Var</p>
-      </div>
-      <div class="col-4">
-        <p class="subtitulo">P11</p>
-        <p class="money">{{card.moneyP11}}</p>
-        <p class="var-money">{{card.moneyVar}}</p>
+ 
+  <div *ngFor="let type of resume">
+    <!-- Ventas -->
+    <div class="container-fluid carta" >
+      <div class="row">
+        <div class="col-4">
+          <p class="titulo-carta">Venta - {{type.tipoId}}</p>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_venta.png)'}"></div>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo"> {{currentPeriod.tituloPrimerPeriodo}}</p>
+          <p class="money">${{type.primerPeriodoVentas}}</p>
+          <p class="var">Var</p>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
+          <p class="money">${{type.segundoPeriodoVentas}}</p>
+          <p class="var-money">${{type.variacionVentas}}</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid carta-vacia">
 
+    <!-- Unidades -->
+    <div class="container-fluid carta" >
+      <div class="row">
+        <div class="col-4">
+          <p class="titulo-carta">Unidades - {{type.tipoId}}</p>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_unidades.png)'}"></div>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
+          <p class="money">{{type.primerPeriodoUnidades}}</p>
+          <p class="var">Var</p>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
+          <p class="money">{{type.segundoPeriodoUnidades}}</p>
+          <p class="var-money">{{type.variacionUnidades}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contribucion -->
+    <div class="container-fluid carta" >
+      <div class="row">
+        <div class="col-4">
+          <p class="titulo-carta">Unidades - {{type.tipoId}}</p>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_contribucion.png)'}"></div>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
+          <p class="money">{{type.primerPeriodoContribucion}}</p>
+          <p class="var">Var</p>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
+          <p class="money">{{type.segundoPeriodoContribucion}}</p>
+          <p class="var-money">{{type.variacionContribucion}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Margen -->
+    <div class="container-fluid carta" >
+      <div class="row">
+        <div class="col-4">
+          <p class="titulo-carta">Margen - {{type.tipoId}}</p>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_margen.png)'}"></div>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
+          <p class="money">{{type.primerPeriodoMargen}}</p>
+          <p class="var">Var</p>
+        </div>
+        <div class="col-4">
+          <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
+          <p class="money">{{type.segundoPeriodoMargen}}</p>
+          <p class="var-money">{{type.variacionMargen}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Carta Vacia-->
+    <div class="container-fluid carta-vacia">
+    </div>
   </div>
 </div>

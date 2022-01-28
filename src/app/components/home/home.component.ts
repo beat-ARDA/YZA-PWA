@@ -1,4 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IPeriod } from 'src/app/models/period';
+import { ISoiResume } from 'src/app/models/soiresume';
+import { PeriodService } from 'src/app/services/period.service';
+import { SoiresumeService } from 'src/app/services/soiresume.service';
 
 @Component({
   selector: 'app-home',
@@ -6,45 +10,27 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  @Input() urlHome: string;
-  cards: any;
-  
-  constructor() {
-    this.urlHome= '';
-    this.cards = [
-      {
-        nombre: 'Venta',
-        icono: '../../../assets/Assets/iOS/ic_venta.png',
-        moneyP4: '$ 1.00.000',
-        moneyP11: '$ 2.000.000',
-        moneyVar: '$ 1.000.000',
-      },
-      {
-        nombre: 'Unidades',
-        icono: '../../../assets/Assets/iOS/ic_unidades.png',
-        moneyP4: '$ 300.000',
-        moneyP11: '$ 1.000.000',
-        moneyVar: '$ 700.000',
-      },
-      {
-        nombre: 'Contribución',
-        icono: '../../../assets/Assets/iOS/ic_contribucion.png',
-        moneyP4: '$ 400.000',
-        moneyP11: '$ 1.200.000',
-        moneyVar: '$ 800.000',
-      },
-      {
-        nombre: 'Margen',
-        icono: '../../../assets/Assets/iOS/ic_margen.png',
-        moneyP4: '30%',
-        moneyP11: '60%',
-        moneyVar: '30%',
-      }
-    ];
 
-  }
+  public resume: ISoiResume[] = [];
+  public currentPeriod: IPeriod = <IPeriod>{};
+
+  constructor(private periodService: PeriodService,
+    private soiResumeService: SoiresumeService) { }
 
   ngOnInit(): void {
+      this.getCurrentPeriod();
+      this.getSoiResume();
+  }
 
+  getCurrentPeriod() {
+    this.periodService.getCurrentPeriod().subscribe((period) => {
+      this.currentPeriod = period;
+    });
+  }
+
+  getSoiResume() {
+    this.soiResumeService.getSoiResume().subscribe((soiResume) => {
+      this.resume = soiResume;
+    });
   }
 }

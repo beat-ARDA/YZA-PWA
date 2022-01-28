@@ -9,9 +9,9 @@ import { CuerpoBusquedaComponent } from './components/cuerpo-busqueda/cuerpo-bus
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home/Soi', component: HomeComponent },
-  { path: 'home/:name', component: BebeHomeComponent },
+  { path: 'home/:url/:name', component: BebeHomeComponent },
   { path: 'detalles/:name', component: CuerpoBusquedaComponent },
-  
+  { path: 'detalles/:name/:id', component: CuerpoBusquedaComponent }
 ];
 
 @NgModule({
