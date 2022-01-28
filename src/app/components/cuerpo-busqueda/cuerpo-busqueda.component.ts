@@ -1,9 +1,12 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IArticulo } from 'src/app/models/articulo';
 import { ICategoria } from 'src/app/models/categoria';
+import { IPeriod } from 'src/app/models/period';
 import { CategoryService } from 'src/app/services/category.service';
 import { ItemService } from 'src/app/services/item.service';
+import { PeriodService } from 'src/app/services/period.service';
 
 @Component({
   selector: 'app-cuerpo-busqueda',
@@ -12,18 +15,39 @@ import { ItemService } from 'src/app/services/item.service';
 })
 export class CuerpoBusquedaComponent implements OnInit {
 
-  public items: IArticulo[] = [];
+  public period: IPeriod = <IPeriod>{};
   public category: ICategoria = <ICategoria>{};
+  public items: IArticulo[] = [];
+  public section: string = '';
 
   constructor(private _itemService: ItemService,
+    private _categoryService: CategoryService,
+    private _period: PeriodService,
     private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-     this._route.params.subscribe((params) => {
-        let categoryId = params['id'];
+     let categoryId;
 
-        if(categoryId)
+     this.getCurrentPeriod();
+
+     this._route.params.subscribe((params) => {
+        categoryId = params['id'];
+        this.section = params['name'];
+
+        if(categoryId){
           this.getItems(categoryId);
+          this.getCategoryById(categoryId);
+          this.saveCategoryId(categoryId);
+          return;
+        }
+        
+        categoryId = this.getCategoryId();
+
+        if(categoryId){
+          this.getItems(categoryId);
+          this.getCategoryById(categoryId);
+          return;
+        }
      });
   }
 
@@ -32,6 +56,26 @@ export class CuerpoBusquedaComponent implements OnInit {
     this._itemService.getItems(categoryId).subscribe((items) => {
       this.items = items;
     });
+  }
+
+  getCategoryById(categoryId: string){
+    this._categoryService.getCategoryById(categoryId).subscribe((category) => {
+      this.category = category;
+    });
+  }
+
+  getCurrentPeriod() {
+    this._period.getCurrentPeriod().subscribe((period) => {
+      this.period = period;
+    });
+  }
+
+  saveCategoryId(categoryId: string){
+    localStorage.setItem('categoryId', categoryId);
+  }
+
+  getCategoryId(): string | null {
+    return localStorage.getItem('categoryId');
   }
 
 }

@@ -13,9 +13,11 @@ export class CategoryService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCategories(typeResume: string): Observable<ICategoria[]> {
-      return this.httpClient.get<ICategoria[]>(`${this.url}/${typeResume}`);
+  getCategoryById(categoryId: string): Observable<ICategoria> {
+    return this.httpClient.get<ICategoria>(`${this.url}/${categoryId}`);
   }
 
-  
+  getCategories(typeResume: string): Observable<ICategoria[]> {
+      return this.httpClient.get<ICategoria[]>(`${this.url}/${typeResume}`);
+  }  
 }

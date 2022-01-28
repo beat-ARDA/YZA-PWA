@@ -8,6 +8,7 @@ export interface IArticulo {
     primerPeriodoComportamientoVenta: number,
     primerPeriodoComportamientoContribucion: number, 
     primerPeriodoComportamientoMargen: number, 
+
     segundoPeriodoComportamientoUnidades: number, 
     segundoPeriodoComportamientoVenta: number, 
     segundoPeriodoComportamientoContribucion: number, 
@@ -15,6 +16,7 @@ export interface IArticulo {
 
     primerPeriodoPorcentajeUnidades: number, 
     primerPeriodoPorcentajeVenta: number, 
+    
     segundoPeriodoPorcentajeUnidades: number, 
     segundoPeriodoPorcentajeVenta: number, 
 
