@@ -19,18 +19,30 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
       this.getCurrentPeriod();
-      this.getSoiResume();
   }
 
   getCurrentPeriod() {
     this.periodService.getCurrentPeriod().subscribe((period) => {
       this.currentPeriod = period;
+      this.savePeriodId(this.currentPeriod.id);
+      this.getSoiResume();
     });
   }
 
   getSoiResume() {
-    this.soiResumeService.getSoiResume().subscribe((soiResume) => {
+    let periodId = this.getPeriodId();
+
+    this.soiResumeService.getSoiResume(periodId).subscribe((soiResume) => {
       this.resume = soiResume;
     });
+  }
+
+  savePeriodId(periodId: string) {
+    localStorage.setItem('periodId', periodId);
+  }
+
+  getPeriodId(): string {
+    let periodId = localStorage.getItem('periodId');
+    return periodId == null ? '': periodId;
   }
 }

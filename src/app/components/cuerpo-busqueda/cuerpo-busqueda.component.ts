@@ -28,14 +28,12 @@ export class CuerpoBusquedaComponent implements OnInit {
   ngOnInit(): void {
      let categoryId;
 
-     this.getCurrentPeriod();
-
      this._route.params.subscribe((params) => {
         categoryId = params['id'];
         this.section = params['name'];
 
         if(categoryId){
-          this.getItems(categoryId);
+          this.getCurrentPeriod(categoryId);
           this.getCategoryById(categoryId);
           this.saveCategoryId(categoryId);
           return;
@@ -44,7 +42,7 @@ export class CuerpoBusquedaComponent implements OnInit {
         categoryId = this.getCategoryId();
 
         if(categoryId){
-          this.getItems(categoryId);
+          this.getCurrentPeriod(categoryId);
           this.getCategoryById(categoryId);
           return;
         }
@@ -52,8 +50,8 @@ export class CuerpoBusquedaComponent implements OnInit {
   }
 
 
-  getItems(categoryId: string) {
-    this._itemService.getItems(categoryId).subscribe((items) => {
+  getItems(periodoId: string, categoryId: string) {
+    this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
       this.items = items;
     });
   }
@@ -64,9 +62,11 @@ export class CuerpoBusquedaComponent implements OnInit {
     });
   }
 
-  getCurrentPeriod() {
+  getCurrentPeriod(categoryId: string) {
     this._period.getCurrentPeriod().subscribe((period) => {
       this.period = period;
+
+      this.getItems(this.period.id, categoryId);
     });
   }
 
