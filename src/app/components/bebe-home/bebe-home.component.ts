@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICategoria } from 'src/app/models/categoria';
 import { IPeriod } from 'src/app/models/period';
+import { categories } from 'src/app/mucks/categories.muck';
 import { CategoryService } from 'src/app/services/category.service';
 import { PeriodService } from 'src/app/services/period.service';
 
@@ -35,6 +36,7 @@ export class BebeHomeComponent implements OnInit {
       this.periodo = period;
       this.getCategories(this.periodo.id, typeResume);
     });
+    // this.categories = categories
   }
 
   getCategories(periodoId: string, typeResume: string) {

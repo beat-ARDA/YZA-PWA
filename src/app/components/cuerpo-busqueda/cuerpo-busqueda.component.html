@@ -28,7 +28,7 @@
     </div>
     <!-- COMPORTAMIENTO -->
     <div *ngIf="section == 'Comportamiento'">
-        <div class="titulos-detalle-producto"  *ngFor="let item of items">
+        <div class="titulos-detalle-producto"  *ngFor="let item of itemsFiltered">
             <div class="row">
                 <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
                 <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>

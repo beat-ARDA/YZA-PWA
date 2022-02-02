@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IArticulo } from 'src/app/models/articulo';
 import { ICategoria } from 'src/app/models/categoria';
 import { IPeriod } from 'src/app/models/period';
+import { articles } from 'src/app/mucks/articles.muck.';
 import { CategoryService } from 'src/app/services/category.service';
 import { ItemService } from 'src/app/services/item.service';
 import { PeriodService } from 'src/app/services/period.service';
@@ -58,8 +59,10 @@ export class CuerpoBusquedaComponent implements OnInit {
   getItems(periodoId: string, categoryId: string) {
     this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
       this.items = items;
-      this.itemsFiltered  = items
+      this.itemsFiltered = items
     });
+    // this.items = articles;
+    // this.itemsFiltered = this.items
   }
 
   getCategoryById(categoryId: string) {
@@ -74,6 +77,8 @@ export class CuerpoBusquedaComponent implements OnInit {
 
       this.getItems(this.period.id, categoryId);
     });
+    // this.items = articles;
+    // this.itemsFiltered = this.items
   }
 
   saveCategoryId(categoryId: string) {
