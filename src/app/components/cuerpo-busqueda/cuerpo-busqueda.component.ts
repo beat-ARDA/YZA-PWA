@@ -1,5 +1,6 @@
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { IArticulo } from 'src/app/models/articulo';
 import { ICategoria } from 'src/app/models/categoria';
@@ -19,6 +20,11 @@ export class CuerpoBusquedaComponent implements OnInit {
   public category: ICategoria = <ICategoria>{};
   public items: IArticulo[] = [];
   public section: string = '';
+  categoryId: string = ""
+  searchForm = new FormGroup({
+    filter: new FormControl("")
+  })
+  itemsFiltered: IArticulo[] = [];
 
   constructor(private _itemService: ItemService,
     private _categoryService: CategoryService,
@@ -26,37 +32,37 @@ export class CuerpoBusquedaComponent implements OnInit {
     private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-     let categoryId;
 
-     this._route.params.subscribe((params) => {
-        categoryId = params['id'];
-        this.section = params['name'];
+    this._route.params.subscribe((params) => {
+      this.categoryId = params['id'];
+      this.section = params['name'];
 
-        if(categoryId){
-          this.getCurrentPeriod(categoryId);
-          this.getCategoryById(categoryId);
-          this.saveCategoryId(categoryId);
-          return;
-        }
-        
-        categoryId = this.getCategoryId();
+      if (this.categoryId) {
+        this.getCurrentPeriod(this.categoryId);
+        this.getCategoryById(this.categoryId);
+        this.saveCategoryId(this.categoryId);
+        return;
+      }
 
-        if(categoryId){
-          this.getCurrentPeriod(categoryId);
-          this.getCategoryById(categoryId);
-          return;
-        }
-     });
+      this.categoryId = this.getCategoryId() || "";
+
+      if (this.categoryId) {
+        this.getCurrentPeriod(this.categoryId);
+        this.getCategoryById(this.categoryId);
+        return;
+      }
+    });
   }
 
 
   getItems(periodoId: string, categoryId: string) {
     this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
       this.items = items;
+      this.itemsFiltered  = items
     });
   }
 
-  getCategoryById(categoryId: string){
+  getCategoryById(categoryId: string) {
     this._categoryService.getCategoryById(categoryId).subscribe((category) => {
       this.category = category;
     });
@@ -70,12 +76,22 @@ export class CuerpoBusquedaComponent implements OnInit {
     });
   }
 
-  saveCategoryId(categoryId: string){
+  saveCategoryId(categoryId: string) {
     localStorage.setItem('categoryId', categoryId);
   }
 
   getCategoryId(): string | null {
     return localStorage.getItem('categoryId');
+  }
+
+  onSearchFilter(): void {
+    const filter: string = this.searchForm.get("filter")?.value || ""
+    if (filter !== "") {
+      this.itemsFiltered = this.items.filter(item => item.codigoArticulo.includes(filter.toLocaleLowerCase()) || item.nombreArticulo.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
+    }
+    else {
+      this.getItems(this.period.id, this.categoryId)
+    }
   }
 
 }

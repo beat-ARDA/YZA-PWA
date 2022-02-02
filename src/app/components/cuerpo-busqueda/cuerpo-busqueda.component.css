@@ -62,17 +62,25 @@
     padding-bottom: 0rem;
 }
 
-.icono-busqueda {
-    background-image: url('../../../assets/Assets/iOS/ic_lupa.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+.search-button {
     width: 1.4583rem;
     height: 1.4583rem;
     display: inline-block;
     position: absolute;
-    left: 85%;
+    right: 8%;
     top: 50%;
     transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+
+.icono-busqueda {
+    background-image: url("../../../assets/Assets/iOS/ic_lupa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.4583rem;
+    height: 1.4583rem;
 }
 
 .detalle-general {
