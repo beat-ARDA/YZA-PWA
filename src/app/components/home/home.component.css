@@ -24,7 +24,7 @@
 }
 
 .carta-vacia {
-  height: 8.3333rem;
+  height: 2.3333rem;
 }
 
 .titulo-carta {
@@ -37,6 +37,19 @@
   margin-bottom: 1.5rem;
   overflow-wrap: break-word;
 }
+
+.titulo-resumen {
+  text-align: center;
+  font-family: 'lato-medium';
+  font-size: 1.2167rem;
+  letter-spacing: -0.0192rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow-wrap: break-word;
+}
+
 
 .icono-carta {
   background-position: center;

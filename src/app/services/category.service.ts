@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ICategoria } from '../models/categoria';
 import { environment } from 'src/environments/environment';
@@ -13,9 +13,16 @@ export class CategoryService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCategories(typeResume: string): Observable<ICategoria[]> {
-      return this.httpClient.get<ICategoria[]>(`${this.url}/${typeResume}`);
+  getCategoryById(categoryId: string): Observable<ICategoria> {
+    return this.httpClient.get<ICategoria>(`${this.url}/${categoryId}`);
   }
 
-  
+  getCategories(periodoId: string, typeResume: string): Observable<ICategoria[]> {
+
+      let params = new HttpParams();
+      params = params.set('PeriodoId', periodoId);
+      params = params.set('TipoResumen', typeResume);
+
+      return this.httpClient.get<ICategoria[]>(`${this.url}`, { params });
+  }  
 }

@@ -27,6 +27,7 @@
 }
 
 .titulo-carta {
+  text-align: center;
   font-family: 'lato-medium';
   font-size: 1.3333rem;
   letter-spacing: -0.0175rem;

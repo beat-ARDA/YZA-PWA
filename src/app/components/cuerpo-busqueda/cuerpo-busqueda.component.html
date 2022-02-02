@@ -1,6 +1,6 @@
 <diV class="container-fluid">
     <div class="row text-center row-titulo">
-        <p class="titulo">Tohallas Humedas</p>
+        <p class="titulo">{{category.nombreCategoria}}</p>
         <div class="icono-cerrar" [routerLink]="['/home', 'Soi']"></div>
     </div>
     <div class="row row-busqueda">
@@ -11,48 +11,121 @@
     <div class="row detalle-general">
         <div class="col-6">
             <p class="titulo-detalle-general">Unidades</p>
-            <p class="subtitulo-detalle-general">$ 23.384 / 30%</p>
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaUnidades }} / {{ category.variacionPorcentajeUnidades }}%</p>
             <p class="titulo-detalle-general">Contribucion</p>
-            <p class="subtitulo-detalle-general">$ 834.916 / 142 %</p>
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion }} / {{ category.variacionPorcentajeContribucion }} %</p>
         </div>
         <div class="col-6">
             <p class="titulo-detalle-general">Venta</p>
-            <p class="subtitulo-detalle-general">$ 1.110.450 / 40%</p>
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta }} / {{ category.variacionPorcentajeVenta }}%</p>
             <p class="titulo-detalle-general">Margen</p>
-            <p class="subtitulo-detalle-general">16%</p>
+            <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen }}%</p>
         </div>
     </div>
-    <div class="titulos-detalle-producto" *ngFor="let item of items">
-        <div class="row">
-            <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
-            <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
-        </div>
-        <div class="row segunda-fila">
-            <p class="col-2 titulo-propiedad"></p>
-            <p class="col-2 titulo-propiedad">Unidades</p>
-            <p class="col-3 titulo-propiedad">Venta</p>
-            <p class="col-5 titulo-propiedad">Contribucion</p>
-        </div>
-        <div class="row ">
-            <p class="col-2 var-propiedad">Var $$</p>
-            <p class="col-2 valor-propiedad">${{ item.variacionMonedaUnidades }}</p>
-            <p class="col-3 valor-propiedad">${{ item.variacionMonedaVenta }}</p>
-            <p class="col-5 valor-propiedad">${{ item.variacionMonedaContribucion }}</p>
-        </div>
+    <!-- COMPORTAMIENTO -->
+    <div *ngIf="section == 'Comportamiento'">
+        <div class="titulos-detalle-producto"  *ngFor="let item of items">
+            <div class="row">
+                <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
+                <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
+            </div>
+            <div class="row segunda-fila">
+                
+                <p class="col-3 titulo-propiedad">Unidades</p>
+                <p class="col-3 titulo-propiedad">Venta</p>
+                <p class="col-3 titulo-propiedad">Contribucion</p>
+                <p class="col-3 titulo-propiedad"></p>
+            </div>
+            <div class="row ">
+                <p class="col-3 valor-propiedad">${{ item.variacionMonedaUnidades }}</p>
+                <p class="col-3 valor-propiedad">${{ item.variacionMonedaVenta }}</p>
+                <p class="col-3 valor-propiedad">${{ item.variacionMonedaContribucion }}</p>
+                <p class="col-3 var-propiedad"></p>
+            </div>
 
-        <div class="row segunda-fila">
-            <p class="col-2 titulo-propiedad"></p>
-            <p class="col-2 titulo-propiedad">Unidades</p>
-            <p class="col-3 titulo-propiedad">Venta</p>
-            <p class="col-3 titulo-propiedad">Contribucion</p>
-            <p class="col-2 titulo-propiedad">Margen</p>
-        </div>
-        <div class="row ">
-            <p class="col-2 var-propiedad">Var %%</p>
-            <p class="col-2 valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
-            <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
-            <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
-            <p class="col-2 valor-propiedad">%{{ item.variacionPorcentajeMargen }}</p>
+            <div class="row segunda-fila">
+                <p class="col-3 titulo-propiedad">Unidades</p>
+                <p class="col-3 titulo-propiedad">Venta</p>
+                <p class="col-3 titulo-propiedad">Contribucion</p>
+                <p class="col-3 titulo-propiedad">Margen</p>
+            </div>
+            <div class="row ">
+                <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
+                <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
+                <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
+                <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeMargen }}</p>
+            </div>
         </div>
     </div>
+
+    <!-- PORCENTAJES -->
+    <div *ngIf="section == 'Porcentajes'">
+        <div class="titulos-detalle-producto" *ngFor="let item of items">
+            <div class="row">
+                <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
+                <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
+            </div>
+            <div class="row segunda-fila">
+                <p class="col-2 titulo-propiedad"></p>
+                <p class="col-5 titulo-propiedad">Unidades</p>
+                <p class="col-5 titulo-propiedad">Venta</p>
+            </div>
+            <div class="row ">
+                <p class="col-2 var-propiedad">{{ period.tituloPrimerPeriodo }}</p>
+                <p class="col-5 valor-propiedad">%{{ item.primerPeriodoPorcentajeUnidades }}</p>
+                <p class="col-5 valor-propiedad">%{{ item.primerPeriodoPorcentajeVenta }}</p>
+            </div>
+
+            <div class="row segunda-fila">
+                <p class="col-2 titulo-propiedad"></p>
+                <p class="col-5 titulo-propiedad">Unidades</p>
+                <p class="col-5 titulo-propiedad">Venta</p>
+            </div>
+            <div class="row ">
+                <p class="col-2 var-propiedad">{{period.tituloSegundoPeriodo}}</p>
+                <p class="col-5 valor-propiedad">%{{ item.segundoPeriodoPorcentajeUnidades }}</p>
+                <p class="col-5 valor-propiedad">%{{ item.segundoPeriodoPorcentajeVenta }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VARIACION -->
+    <div *ngIf="section == 'Variacion'">
+        <div class="titulos-detalle-producto" *ngFor="let item of items">
+            <div class="row">
+                <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
+                <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
+            </div>
+            <div class="row segunda-fila">
+                <p class="col-2 titulo-propiedad"></p>
+                <p class="col-2 titulo-propiedad">Unidades</p>
+                <p class="col-3 titulo-propiedad">Venta</p>
+                <p class="col-5 titulo-propiedad">Contribucion</p>
+            </div>
+            <div class="row ">
+                <p class="col-2 var-propiedad">Var $$</p>
+                <p class="col-2 valor-propiedad">${{ item.variacionMonedaUnidades }}</p>
+                <p class="col-3 valor-propiedad">${{ item.variacionMonedaVenta }}</p>
+                <p class="col-5 valor-propiedad">${{ item.variacionMonedaContribucion }}</p>
+            </div>
+    
+            <div class="row segunda-fila">
+                <p class="col-2 titulo-propiedad"></p>
+                <p class="col-2 titulo-propiedad">Unidades</p>
+                <p class="col-3 titulo-propiedad">Venta</p>
+                <p class="col-3 titulo-propiedad">Contribucion</p>
+                <p class="col-2 titulo-propiedad">Margen</p>
+            </div>
+            <div class="row ">
+                <p class="col-2 var-propiedad">Var %%</p>
+                <p class="col-2 valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
+                <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
+                <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
+                <p class="col-2 valor-propiedad">%{{ item.variacionPorcentajeMargen }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row vacia"></div>
+    
 </diV>

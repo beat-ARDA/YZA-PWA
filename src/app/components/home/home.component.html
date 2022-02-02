@@ -1,11 +1,20 @@
 <div class="container-fluid padre">
  
   <div *ngFor="let type of resume">
+
+    <div class="container-fluid carta">
+      <div class="row">
+        <div class="col-12">
+           <p class="titulo-resumen">{{type.tipoId}}</p> 
+        </div>
+      </div>
+    </div>
+
     <!-- Ventas -->
     <div class="container-fluid carta" >
       <div class="row">
         <div class="col-4">
-          <p class="titulo-carta">Venta - {{type.tipoId}}</p>
+          <p class="titulo-carta">Venta </p>
           <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_venta.png)'}"></div>
         </div>
         <div class="col-4">
@@ -25,7 +34,7 @@
     <div class="container-fluid carta" >
       <div class="row">
         <div class="col-4">
-          <p class="titulo-carta">Unidades - {{type.tipoId}}</p>
+          <p class="titulo-carta">Unidades </p>
           <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_unidades.png)'}"></div>
         </div>
         <div class="col-4">
@@ -45,7 +54,7 @@
     <div class="container-fluid carta" >
       <div class="row">
         <div class="col-4">
-          <p class="titulo-carta">Unidades - {{type.tipoId}}</p>
+          <p class="titulo-carta">Unidades</p>
           <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_contribucion.png)'}"></div>
         </div>
         <div class="col-4">
@@ -65,7 +74,7 @@
     <div class="container-fluid carta" >
       <div class="row">
         <div class="col-4">
-          <p class="titulo-carta">Margen - {{type.tipoId}}</p>
+          <p class="titulo-carta">Margen</p>
           <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_margen.png)'}"></div>
         </div>
         <div class="col-4">
@@ -84,5 +93,8 @@
     <!--Carta Vacia-->
     <div class="container-fluid carta-vacia">
     </div>
+  </div>
+
+  <div class="container-fluid carta-vacia">
   </div>
 </div>

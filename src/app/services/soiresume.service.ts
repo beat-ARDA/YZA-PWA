@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -13,8 +13,11 @@ export class SoiresumeService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getSoiResume(): Observable<ISoiResume[]> {
-    return this.httpClient.get<ISoiResume[]>(this.url);
+  getSoiResume(periodoId: string): Observable<ISoiResume[]> {
+    let params = new HttpParams();
+    params = params.set('PeriodoId', periodoId)
+
+    return this.httpClient.get<ISoiResume[]>(this.url, { params });
   }
   
 }

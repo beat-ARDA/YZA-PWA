@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -13,7 +13,12 @@ export class ItemService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getItems(categoryId: string): Observable<IArticulo[]> {
-    return this.httpClient.get<IArticulo[]>(`${this.url}/${categoryId}`);
+  getItems(periodoId: string, categoryId: string): Observable<IArticulo[]> {
+
+    let params = new HttpParams();
+    params = params.set('PeriodoId', periodoId);
+    params = params.set('CategoriaId', categoryId);
+
+    return this.httpClient.get<IArticulo[]>(`${this.url}`, { params });
   }
 }
