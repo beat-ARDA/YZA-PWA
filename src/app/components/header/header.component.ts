@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AzureActiveDirectoryService } from '../../services/azure-active-directory.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() titulo: string;
 
-  constructor() {
+  constructor(public ad: AzureActiveDirectoryService) {
     this.titulo = "";
   }
 
