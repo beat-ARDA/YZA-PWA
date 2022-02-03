@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
       new ItemMenu("Bebé", "BB", "../../../assets/Android/hdpi/ic_bb_on.png", "../../../assets/Android/hdpi/ic_bb_off.png"),
       new ItemMenu("HCP", "HCP", "../../../assets/Android/hdpi/ic_evo_farma_on.png", "../../../assets/Android/hdpi/ic_evo_farma_off.png"),
       new ItemMenu("Farma", "FARMA", "../../../assets/Android/hdpi/ic_farma_on.png", "../../../assets/Android/hdpi/ic_farma_off.png"),
-      new ItemMenu("Farma ac", "FARMAAC", "../../../assets/Android/hdpi/ic_farma_ac_on.png", "../../../assets/Android/hdpi/ic_farma_ac_off.png")      
+      new ItemMenu("Farma ac", "FARMAAC", "../../../assets/Android/hdpi/ic_farma_ac_on.png", "../../../assets/Android/hdpi/ic_farma_ac_off.png")
     ];
 
     this.itemsDetalles = [
@@ -35,5 +35,6 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 }
