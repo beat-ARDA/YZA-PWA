@@ -16,6 +16,4 @@ export class CategoryService {
   getCategories(typeResume: string): Observable<ICategoria[]> {
       return this.httpClient.get<ICategoria[]>(`${this.url}/${typeResume}`);
   }
-
-  
 }
