@@ -57,7 +57,8 @@ export class CuerpoBusquedaComponent implements OnInit {
     // this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
     //   this.items = items;
     // });
-    this.items = articles;
+    // this.items = articles;
+    // this.itemsFiltered = this.items
   }
 
   getCategoryById(categoryId: string) {
@@ -72,7 +73,8 @@ export class CuerpoBusquedaComponent implements OnInit {
 
       this.getItems(this.period.id, categoryId);
     });
-    this.items = articles;
+    // this.items = articles;
+    // this.itemsFiltered = this.items
   }
 
   saveCategoryId(categoryId: string) {
