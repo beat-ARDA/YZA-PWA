@@ -4,37 +4,38 @@
         <div class="icono-cerrar" [routerLink]="['/home', 'Soi']"></div>
     </div>
     <div class="row row-busqueda">
-        <form [formGroup]="searchForm" (ngSubmit)="onSearchFilter()">
-            <input class="busqueda form-control mr-sm-2" type="search" placeholder="Ingrese una busqueda..."
-                formControlName="filter" aria-label="Search">
-            <button type="submit" class="search-button">
-                <div class="icono-busqueda"></div>
-            </button>
-        </form>
+        <input class="busqueda form-control mr-sm-2" type="search" placeholder="Ingrese una busqueda..."
+            aria-label="Search" name="filterItems" [(ngModel)]="filterItems">
+        <button type="submit" class="search-button">
+            <div class="icono-busqueda"></div>
+        </button>
     </div>
     <div class="row detalle-general">
         <div class="col-6">
             <p class="titulo-detalle-general">Unidades</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaUnidades }} / {{ category.variacionPorcentajeUnidades }}%</p>
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaUnidades }} / {{
+                category.variacionPorcentajeUnidades }}%</p>
             <p class="titulo-detalle-general">Contribucion</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion }} / {{ category.variacionPorcentajeContribucion }} %</p>
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion }} / {{
+                category.variacionPorcentajeContribucion }} %</p>
         </div>
         <div class="col-6">
             <p class="titulo-detalle-general">Venta</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta }} / {{ category.variacionPorcentajeVenta }}%</p>
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta }} / {{
+                category.variacionPorcentajeVenta }}%</p>
             <p class="titulo-detalle-general">Margen</p>
             <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen }}%</p>
         </div>
     </div>
     <!-- COMPORTAMIENTO -->
     <div *ngIf="section == 'Comportamiento'">
-        <div class="titulos-detalle-producto"  *ngFor="let item of itemsFiltered">
+        <div class="titulos-detalle-producto" *ngFor="let item of items | filter:filterItems">
             <div class="row">
                 <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
                 <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
             </div>
             <div class="row segunda-fila">
-                
+
                 <p class="col-3 titulo-propiedad">Unidades</p>
                 <p class="col-3 titulo-propiedad">Venta</p>
                 <p class="col-3 titulo-propiedad">Contribucion</p>
@@ -112,7 +113,7 @@
                 <p class="col-3 valor-propiedad">${{ item.variacionMonedaVenta }}</p>
                 <p class="col-5 valor-propiedad">${{ item.variacionMonedaContribucion }}</p>
             </div>
-    
+
             <div class="row segunda-fila">
                 <p class="col-2 titulo-propiedad"></p>
                 <p class="col-2 titulo-propiedad">Unidades</p>
@@ -131,5 +132,5 @@
     </div>
 
     <div class="row vacia"></div>
-    
+
 </diV>

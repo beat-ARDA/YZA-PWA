@@ -32,11 +32,11 @@ export class BebeHomeComponent implements OnInit {
   }
 
   getCurrentPeriodo(typeResume: string) {
-    this._periodoService.getCurrentPeriod().subscribe((period) => {
-      this.periodo = period;
-      this.getCategories(this.periodo.id, typeResume);
-    });
-    // this.categories = categories
+    // this._periodoService.getCurrentPeriod().subscribe((period) => {
+    //   this.periodo = period;
+    //   this.getCategories(this.periodo.id, typeResume);
+    // });
+    this.categories = categories
   }
 
   getCategories(periodoId: string, typeResume: string) {

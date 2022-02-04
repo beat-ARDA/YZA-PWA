@@ -22,10 +22,7 @@ export class CuerpoBusquedaComponent implements OnInit {
   public items: IArticulo[] = [];
   public section: string = '';
   categoryId: string = ""
-  searchForm = new FormGroup({
-    filter: new FormControl("")
-  })
-  itemsFiltered: IArticulo[] = [];
+  filterItems: string = ""
 
   constructor(private _itemService: ItemService,
     private _categoryService: CategoryService,
@@ -57,12 +54,10 @@ export class CuerpoBusquedaComponent implements OnInit {
 
 
   getItems(periodoId: string, categoryId: string) {
-    this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
-      this.items = items;
-      this.itemsFiltered = items
-    });
-    // this.items = articles;
-    // this.itemsFiltered = this.items
+    // this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
+    //   this.items = items;
+    // });
+    this.items = articles;
   }
 
   getCategoryById(categoryId: string) {
@@ -77,8 +72,7 @@ export class CuerpoBusquedaComponent implements OnInit {
 
       this.getItems(this.period.id, categoryId);
     });
-    // this.items = articles;
-    // this.itemsFiltered = this.items
+    this.items = articles;
   }
 
   saveCategoryId(categoryId: string) {
@@ -88,15 +82,4 @@ export class CuerpoBusquedaComponent implements OnInit {
   getCategoryId(): string | null {
     return localStorage.getItem('categoryId');
   }
-
-  onSearchFilter(): void {
-    const filter: string = this.searchForm.get("filter")?.value || ""
-    if (filter !== "") {
-      this.itemsFiltered = this.items.filter(item => item.codigoArticulo.includes(filter.toLocaleLowerCase()) || item.nombreArticulo.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
-    }
-    else {
-      this.getItems(this.period.id, this.categoryId)
-    }
-  }
-
 }
