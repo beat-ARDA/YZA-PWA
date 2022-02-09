@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'yza-pwa'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5F8160CA60BD45869CADA1080C090220 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F64B52BE9A4A48F0995494B6F07B34F1 }}
           package: .
