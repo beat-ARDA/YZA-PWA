@@ -1,5 +1,5 @@
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { IArticulo } from 'src/app/models/articulo';
@@ -9,6 +9,7 @@ import { articles } from 'src/app/mucks/articles.muck.';
 import { CategoryService } from 'src/app/services/category.service';
 import { ItemService } from 'src/app/services/item.service';
 import { PeriodService } from 'src/app/services/period.service';
+import { FilterPipe } from '../../pipes/filter.pipe';
 
 @Component({
   selector: 'app-cuerpo-busqueda',
@@ -22,12 +23,14 @@ export class CuerpoBusquedaComponent implements OnInit {
   public items: IArticulo[] = [];
   public section: string = '';
   categoryId: string = ""
-  filterItems: string = ""
+  @Input() filterItems: string = ""
+  filteredItems: IArticulo[] = [];
 
   constructor(private _itemService: ItemService,
     private _categoryService: CategoryService,
     private _period: PeriodService,
-    private _route: ActivatedRoute) { }
+    private _route: ActivatedRoute,
+    private filterPipe: FilterPipe) { }
 
   ngOnInit(): void {
 
@@ -56,6 +59,7 @@ export class CuerpoBusquedaComponent implements OnInit {
   getItems(periodoId: string, categoryId: string) {
     this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
       this.items = items;
+      this.filteredItems = this.items
     });
     // this.items = articles;
     // this.itemsFiltered = this.items
@@ -70,7 +74,6 @@ export class CuerpoBusquedaComponent implements OnInit {
   getCurrentPeriod(categoryId: string) {
     this._period.getCurrentPeriod().subscribe((period) => {
       this.period = period;
-
       this.getItems(this.period.id, categoryId);
     });
     // this.items = articles;
@@ -83,5 +86,10 @@ export class CuerpoBusquedaComponent implements OnInit {
 
   getCategoryId(): string | null {
     return localStorage.getItem('categoryId');
+  }
+
+  getFilteredItems() {
+    this.filteredItems = this.filterItems.trim() !== "" ? this.filterPipe.transform([...this.items], this.filterItems)
+      : this.items
   }
 }

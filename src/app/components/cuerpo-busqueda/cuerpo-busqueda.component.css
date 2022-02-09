@@ -238,3 +238,13 @@
         font-size: 0.6rem;
     }
 }
+
+.no-results-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+.no-results-title{
+    font-size: 1.3333rem;
+}

@@ -24,11 +24,11 @@ export class BebeHomeComponent implements OnInit {
   ngOnInit(): void {
 
     this._route.params.subscribe((params) => {
-       let typeResume = params['name'];
+      let typeResume = params['name'];
 
-       if(typeResume)
-          this.getCurrentPeriodo(typeResume);
-    });              
+      if (typeResume)
+        this.getCurrentPeriodo(typeResume);
+    });
   }
 
   getCurrentPeriodo(typeResume: string) {
@@ -40,8 +40,8 @@ export class BebeHomeComponent implements OnInit {
   }
 
   getCategories(periodoId: string, typeResume: string) {
-    this._categoryService.getCategories(periodoId ,typeResume).subscribe((categories) => {
-      this.categories = categories;  
+    this._categoryService.getCategories(periodoId, typeResume).subscribe((categories) => {
+      this.categories = categories;
     })
   }
 
