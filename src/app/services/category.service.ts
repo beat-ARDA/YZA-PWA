@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ICategoria } from '../models/categoria';
 import { environment } from 'src/environments/environment';
@@ -14,15 +14,26 @@ export class CategoryService {
   constructor(private httpClient: HttpClient) { }
 
   getCategoryById(categoryId: string): Observable<ICategoria> {
-    return this.httpClient.get<ICategoria>(`${this.url}/${categoryId}`);
+    const headers = new HttpHeaders({
+      'Access-Control-Allow-Origin': '*',
+      'Ocp-Apim-Subscription-Key': environment.Ocp_Apim_Subscription_Key,
+      'Ocp-Apim-Trace': 'true'
+    })
+
+    return this.httpClient.get<ICategoria>(`${this.url}/${categoryId}`, { headers });
   }
 
   getCategories(periodoId: string, typeResume: string): Observable<ICategoria[]> {
+    const headers = new HttpHeaders({
+      'Access-Control-Allow-Origin': '*',
+      'Ocp-Apim-Subscription-Key': environment.Ocp_Apim_Subscription_Key,
+      'Ocp-Apim-Trace': 'true'
+    })
 
-      let params = new HttpParams();
-      params = params.set('PeriodoId', periodoId);
-      params = params.set('TipoResumen', typeResume);
+    let params = new HttpParams();
+    params = params.set('PeriodoId', periodoId);
+    params = params.set('TipoResumen', typeResume);
 
-      return this.httpClient.get<ICategoria[]>(`${this.url}`, { params });
-  }  
+    return this.httpClient.get<ICategoria[]>(`${this.url}`, { params, headers });
+  }
 }
