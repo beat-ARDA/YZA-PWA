@@ -7,7 +7,7 @@ import { MsalGuard } from '@azure/msal-angular';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home/Soi', pathMatch: 'full' },
-  { path: 'home/Soi', component: HomeComponent, canActivate: [MsalGuard] },
+  { path: 'home/Soi', component: HomeComponent, canActivate: [MsalGuard], pathMatch: 'full' },
   { path: 'home/:url/:name', component: BebeHomeComponent, canActivate: [MsalGuard] },
   { path: 'detalles/:name', component: CuerpoBusquedaComponent, canActivate: [MsalGuard] },
   { path: 'detalles/:name/:id', component: CuerpoBusquedaComponent, canActivate: [MsalGuard] }
