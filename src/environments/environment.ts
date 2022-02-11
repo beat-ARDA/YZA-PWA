@@ -14,8 +14,8 @@ export const environment = {
   // Unit Test
   // API_URL: 'http://localhost:44366',
   //Azure active directory
-  clienteId: '106a9363-5976-4a32-8967-50cfa2f769db',
-  dirId: 'https://login.microsoftonline.com/66f9ab85-de1a-40d4-b7bb-21565ad57cce',
+  clienteId: '453a1d5e-4577-443a-9357-5f81292ebaff',
+  dirId: 'https://login.microsoftonline.com/19513d13-647c-4aba-be24-9318ebf435b1',
   redUrl: 'http://localhost:4200',
   // Headers
   Ocp_Apim_Subscription_Key: "ed0b3ea3066f414ba4b9f872b824343e"

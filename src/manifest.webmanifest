@@ -1,8 +1,8 @@
 {
   "name": "YZA-PWA",
   "short_name": "YZA-PWA",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#000099",
+  "background_color": "#000099",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
