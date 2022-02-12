@@ -6,9 +6,9 @@ export const environment = {
   ENDPOINT_CATEGORIES: '/api/Categorias',
   ENDPOINT_ITEMS: '/api/Articulos',
   //Azure active directory
-  clienteId: '453a1d5e-4577-443a-9357-5f81292ebaff',
-  dirId: 'https://login.microsoftonline.com/19513d13-647c-4aba-be24-9318ebf435b1',
-  redUrl: 'https://yza-pwa.azurewebsites.net',
+  clienteId: '106a9363-5976-4a32-8967-50cfa2f769db',
+  dirId: 'https://login.microsoftonline.com/66f9ab85-de1a-40d4-b7bb-21565ad57cce',
+  redUrl: 'https://ase-webapp-canibalizacion-poc-east-02.azurewebsites.net',
    // Headers
    Ocp_Apim_Subscription_Key: "52a9cfd90836490ea6cf7bc25f3bf744"
 };
