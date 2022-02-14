@@ -1,7 +1,13 @@
 <div *ngIf="urlDetalles !== 'detalles'" class="menu-padre">
   <div class="item" *ngFor="let item of items">
-    <img [routerLink]="['/home', item.url, item.nombre]" *ngIf="item.url !== titulo" class="icono"
-      src="{{item.iconoNoSelec}}" />
+    <div *ngIf="item.nombre === 'SOI'; else otherItems">
+      <img [routerLink]="['/home', item.url]" *ngIf="item.url !== titulo" class="icono"
+        src="{{item.iconoNoSelec}}" />
+    </div>
+    <ng-template #otherItems>
+      <img [routerLink]="['/home', item.url, item.nombre]" *ngIf="item.url !== titulo" class="icono"
+        src="{{item.iconoNoSelec}}" />
+    </ng-template>
     <img *ngIf="item.url == titulo" class="icono" src="{{item.iconoSelec}}" />
     <p class="texto-icono" [ngClass]="item.url == titulo ? 'texto-icono-select' : 'texto-icono-noSelect'">
       {{item.nombre}}</p>
