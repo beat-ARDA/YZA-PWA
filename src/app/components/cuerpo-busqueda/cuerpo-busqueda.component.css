@@ -259,10 +259,10 @@
     display: flex;
     justify-content: space-between;
 }
-.info-porcentaje{
+.info-porcentaje {
     display: flex;
     justify-content: space-around;
 }
 hr.solid {
-    border-top: 2px solid #818080;
+    border-top: 4px solid #818080;
 }

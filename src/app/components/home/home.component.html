@@ -12,18 +12,19 @@
 
     <!-- Ventas -->
     <div class="container-fluid carta">
-      <div class="row">
-        <div class="col-4">
-          <p class="titulo-carta">Venta </p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_venta.png)'}">
-          </div>
+      <div class="custom-card-header">
+        <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_venta.png)'}">
         </div>
-        <div class="col-4">
+        <p class="titulo-carta">Venta </p>
+      </div>
+      <hr class="solid" />
+      <div class="row custom-card-body">
+        <div class="col-6">
           <p class="subtitulo"> {{currentPeriod.tituloPrimerPeriodo}}</p>
           <p class="money">${{type.primerPeriodoVentas | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
           <p class="money">${{type.segundoPeriodoVentas | number:'1.0-10'}}</p>
           <p class="var-money">${{type.variacionVentas | number:'1.0-10'}}</p>
@@ -33,18 +34,19 @@
 
     <!-- Unidades -->
     <div class="container-fluid carta">
-      <div class="row">
-        <div class="col-4">
-          <p class="titulo-carta">Unidades </p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_unidades.png)'}">
-          </div>
+      <div class="custom-card-header">
+        <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_unidades.png)'}">
         </div>
-        <div class="col-4">
+        <p class="titulo-carta">Unidades </p>
+      </div>
+      <hr class="solid" />
+      <div class="row custom-card-body">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
           <p class="money">{{type.primerPeriodoUnidades | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
           <p class="money">{{type.segundoPeriodoUnidades | number:'1.0-10'}}</p>
           <p class="var-money">{{type.variacionUnidades | number:'1.0-10'}}</p>
@@ -54,18 +56,19 @@
 
     <!-- Contribucion -->
     <div class="container-fluid carta">
-      <div class="row">
-        <div class="col-4">
-          <p class="titulo-carta">Unidades</p>
-          <div class="icono-carta"
-            [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_contribucion.png)'}"></div>
-        </div>
-        <div class="col-4">
+      <div class="custom-card-header">
+        <div class="icono-carta"
+          [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_contribucion.png)'}"></div>
+        <p class="titulo-carta">Contribución </p>
+      </div>
+      <hr class="solid" />
+      <div class="row custom-card-body">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
           <p class="money">{{type.primerPeriodoContribucion | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
           <p class="money">{{type.segundoPeriodoContribucion | number:'1.0-10'}}</p>
           <p class="var-money">{{type.variacionContribucion | number:'1.0-10'}}</p>
@@ -75,18 +78,19 @@
 
     <!-- Margen -->
     <div class="container-fluid carta">
-      <div class="row">
-        <div class="col-4">
-          <p class="titulo-carta">Margen</p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_margen.png)'}">
-          </div>
+      <div class="custom-card-header">
+        <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_margen.png)'}">
         </div>
-        <div class="col-4">
+        <p class="titulo-carta">Margen </p>
+      </div>
+      <hr class="solid" />
+      <div class="row custom-card-body">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
           <p class="money">{{type.primerPeriodoMargen}}</p>
           <p class="var">Var</p>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
           <p class="money">{{type.segundoPeriodoMargen}}</p>
           <p class="var-money">{{type.variacionMargen}}</p>

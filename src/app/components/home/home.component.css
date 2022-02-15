@@ -31,10 +31,11 @@
   font-family: 'lato-medium';
   font-size: 1.4167rem;
   letter-spacing: -0.0192rem;
-  margin-left: 0px;
+  margin-left: 1rem;
   margin-right: 0px;
   margin-top: 0px;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  margin-bottom: 0px;
   overflow-wrap: break-word;
 }
 
@@ -158,4 +159,19 @@
 .info-flex {
   display: flex;
   justify-content: space-between;
+}
+hr.solid {
+  border-top: 2px solid #818080;
+}
+
+.custom-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.custom-card-body{
+  padding: 0 0 1rem 0;
 }
