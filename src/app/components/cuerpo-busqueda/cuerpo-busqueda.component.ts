@@ -59,6 +59,7 @@ export class CuerpoBusquedaComponent implements OnInit {
     this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
       this.items = items;
       this.filteredItems = this.items
+      console.log(items)
     });
     // this.items = articles;
     // this.itemsFiltered = this.items

@@ -37,39 +37,34 @@
                 </div>
                 <div class="row align-items-end">
                     <div class="col-6">
-                        <p class="var-propiedad">Var $$</p>
-                    </div>
-                    <div class="col-6">
-                        <p class="var-propiedad">Var %%</p>
-                    </div>
-                    <div class="col-6">
                         <p class="titulo-propiedad">Unidades</p>
-                        <p class="valor-propiedad">${{ item.variacionMonedaUnidades | number:'1.0-10'}}</p>
+                        <p class="valor-propiedad">${{ item.primerPeriodoComportamientoUnidades | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
+                        <p class="valor-propiedad">${{ item.segundoPeriodoComportamientoUnidades | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Venta</p>
-                        <p class="valor-propiedad">${{ item.variacionMonedaVenta | number:'1.0-10'}}</p>
+                        <p class="valor-propiedad">${{ item.primerPeriodoComportamientoVenta | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
+                        <p class="valor-propiedad">${{ item.segundoPeriodoComportamientoVenta | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Contribución</p>
-                        <p class="valor-propiedad">${{ item.variacionMonedaContribucion | number:'1.0-10'}}</p>
+                        <p class="valor-propiedad">${{ item.primerPeriodoComportamientoContribucion | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
+                        <p class="valor-propiedad">${{ item.segundoPeriodoComportamientoContribucion | number:'1.0-10'}}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <p class="titulo-propiedad">Margen</p>
+                        <p class="valor-propiedad">%{{ item.primerPeriodoComportamientoMargen }}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad margin-row">%{{ item.variacionPorcentajeMargen }}</p>
+                        <p class="valor-propiedad margin-row">%{{ item.segundoPeriodoComportamientoMargen }}</p>
                     </div>
                 </div>
                 <hr class="solid" />
