@@ -24,9 +24,9 @@ export class MenuComponent implements OnInit {
     ];
 
     this.itemsDetalles = [
-      new ItemMenu("Comportamiento", "Comportamiento", "../../../assets/iOS/ic_comportamiento_on.png", "../../../assets/iOS/ic_comportamiento_off.png"),
-      new ItemMenu("Porcentajes", "Porcentajes", "../../../assets/iOS/ic_porcentajes_on.png", "../../../assets/iOS/ic_porcentajes_off.png"),
-      new ItemMenu("Variacion", "Variación $$-%", "../../../assets/iOS/ic_variacion_on.png", "../../../assets/iOS/ic_variacion_off.png")
+      new ItemMenu("Comportamiento", "Comportamiento", "../../../assets/icons/details/verde/comportamiento.svg", "../../../assets/icons/details/negro/comportamiento.svg"),
+      new ItemMenu("Porcentajes", "Porcentajes", "../../../assets/icons/details/verde/porcentaje.svg", "../../../assets/icons/details/negro/porcentaje.svg"),
+      new ItemMenu("Variacion", "Variación $$-%", "../../../assets/icons/details/verde/variacion.svg", "../../../assets/icons/details/negro/variacion.svg")
     ];
 
     this.urlDetalles = "";
