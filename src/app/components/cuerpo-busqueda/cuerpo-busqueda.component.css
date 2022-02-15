@@ -122,8 +122,8 @@
 }
 
 .titulos-detalle-producto {
-    padding-left: 1.0833rem;
-    padding-right: 1.0833rem;
+    padding-left: 2.3333rem;
+    padding-right: 2.3333rem;
     margin-top: 0.8333rem;
     margin-bottom: 0rem;
 }
@@ -191,7 +191,7 @@
     }
 
     .busqueda {
-        font-size: 0.7rem;
+        /* font-size: 0.7rem; */
     }
 
     .titulo {
@@ -267,4 +267,7 @@
 }
 hr.solid {
     border-top: 4px solid #818080;
+}
+.margin-row{
+    margin-top: 24px;
 }
