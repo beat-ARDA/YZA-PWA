@@ -1,33 +1,35 @@
 <diV class="container-fluid">
-    <div class="row text-center row-titulo">
-        <p class="titulo">{{category.nombreCategoria}}</p>
-        <div class="icono-cerrar" [routerLink]="['/home', 'Soi']"></div>
-    </div>
-    <div class="row row-busqueda">
-        <input class="busqueda form-control mr-sm-2" type="text" placeholder="Ingrese una búsqueda..."
-            aria-label="Search" name="filterItems" (ngModelChange)="getFilteredItems()" [(ngModel)]="filterItems">
-        <button type="submit" class="search-button">
-            <div class="icono-busqueda"></div>
-        </button>
-    </div>
-    <div class="row detalle-general">
-        <div class="col-12 p-0">
-            <p class="m-0">Datos Generales</p>
+    <div class="content-header">
+        <div class="row text-center row-titulo">
+            <p class="titulo">{{category.nombreCategoria}}</p>
+            <div class="icono-cerrar" [routerLink]="['/home', 'Soi']"></div>
         </div>
-        <div class="col-6">
-            <p class="titulo-detalle-general">Unidades</p>
-            <p class="subtitulo-detalle-general">{{ category.variacionMonedaUnidades | number:'1.0':'en-US'}} / {{
-                category.variacionPorcentajeUnidades }}%</p>
-            <p class="titulo-detalle-general">Contribución</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion | number:'1.0':'en-US'}} / {{
-                category.variacionPorcentajeContribucion }} %</p>
+        <div class="row row-busqueda">
+            <input class="busqueda form-control mr-sm-2" type="text" placeholder="Ingrese una búsqueda..."
+                aria-label="Search" name="filterItems" (ngModelChange)="getFilteredItems()" [(ngModel)]="filterItems">
+            <button type="submit" class="search-button">
+                <div class="icono-busqueda"></div>
+            </button>
         </div>
-        <div class="col-6">
-            <p class="titulo-detalle-general">Venta</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta | number:'1.0':'en-US'}} / {{
-                category.variacionPorcentajeVenta }}%</p>
-            <p class="titulo-detalle-general">Margen</p>
-            <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen }}%</p>
+        <div class="row detalle-general">
+            <div class="col-12 p-0">
+                <p class="var-propiedad m-0">Datos Generales</p>
+            </div>
+            <div class="col-6">
+                <p class="titulo-detalle-general">Unidades</p>
+                <p class="subtitulo-detalle-general">{{ category.variacionMonedaUnidades | number:'1.0':'en-US'}} / {{
+                    category.variacionPorcentajeUnidades }}%</p>
+                <p class="titulo-detalle-general">Contribución</p>
+                <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion | number:'1.0':'en-US'}} / {{
+                    category.variacionPorcentajeContribucion }} %</p>
+            </div>
+            <div class="col-6">
+                <p class="titulo-detalle-general">Venta</p>
+                <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta | number:'1.0':'en-US'}} / {{
+                    category.variacionPorcentajeVenta }}%</p>
+                <p class="titulo-detalle-general">Margen</p>
+                <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen }}%</p>
+            </div>
         </div>
     </div>
     <!-- COMPORTAMIENTO -->
