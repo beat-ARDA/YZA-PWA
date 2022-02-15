@@ -154,3 +154,8 @@
     height: 2rem;
   }
 }
+
+.info-flex {
+  display: flex;
+  justify-content: space-between;
+}

@@ -15,7 +15,7 @@
 }
 
 .titulo {
-    font-family: 'lato-bold';
+    font-family: "lato-bold";
     font-size: 1.3333rem;
     color: #313670;
     line-height: 1.175rem;
@@ -30,7 +30,7 @@
 }
 
 .icono-cerrar {
-    background-image: url('../../../assets/Assets/iOS/ic_cerrar.png');
+    background-image: url("../../../assets/Assets/iOS/ic_cerrar.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 2rem;
@@ -49,7 +49,7 @@
 }
 
 .busqueda {
-    font-family: 'lato-heavy';
+    font-family: "lato-heavy";
     font-size: 1rem;
     letter-spacing: -0.0133;
     color: #818080;
@@ -85,23 +85,23 @@
     padding-right: 2.3333rem;
     padding-top: 1.0833rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid #D8D8D8;
+    border-bottom: 1px solid #d8d8d8;
 }
 
 .titulo-detalle-general {
-    font-family: 'lato-bold';
+    font-family: "lato-bold";
     font-size: 1.3333rem;
     letter-spacing: -0.0233rem;
-    color: #546CF1;
+    color: #546cf1;
     word-wrap: break-word;
     margin: 0;
 }
 
 .subtitulo-detalle-general {
-    font-family: 'lato-bold';
+    font-family: "lato-bold";
     font-size: 1.3333rem;
     letter-spacing: -0.0233rem;
-    color: #4E535A;
+    color: #4e535a;
     word-wrap: break-word;
     margin-top: 0.3333rem;
     margin-bottom: 0.6667rem;
@@ -127,7 +127,7 @@
 }
 
 .titulo-detalle-producto {
-    font-family: 'lato-heavy';
+    font-family: "lato-heavy";
     font-size: 1rem;
     letter-spacing: -0.0125rem;
     color: #818080;
@@ -135,15 +135,15 @@
     padding: 0rem;
     display: inline-block;
 }
-.propiedad-container{
+.propiedad-container {
     display: flex;
     align-items: end;
 }
 .titulo-propiedad {
-    font-family: 'lato-regular';
+    font-family: "lato-regular";
     font-size: 1rem;
     letter-spacing: -0.0175rem;
-    color: #546CF1;
+    color: #546cf1;
     margin: 0px;
     padding: 0px;
 }
@@ -153,7 +153,7 @@
 }
 
 .var-propiedad {
-    font-family: 'lato-heavy';
+    font-family: "lato-heavy";
     font-size: 1rem;
     letter-spacing: -0.0133rem;
     color: #434343;
@@ -162,24 +162,27 @@
 }
 
 .valor-propiedad {
-    font-family: 'lato-medium';
+    font-family: "lato-medium";
     font-size: 1rem;
     letter-spacing: -0.0175rem;
-    color: #4E535A;
+    color: #4e535a;
     margin: 0rem;
     padding: 0rem;
 }
 
-.detalle-productos {}
+.detalle-productos {
+}
 
 @media (width > 800px) {
-    .icono-busqueda, .icono-cerrar {
+    .icono-busqueda,
+    .icono-cerrar {
         left: 92%;
     }
 }
 
 @media (width < 430px) {
-    .icono-busqueda, .icono-cerrar {
+    .icono-busqueda,
+    .icono-cerrar {
         width: 1.2rem;
         height: 1.2rem;
         /* left: 80%; */
@@ -190,16 +193,16 @@
     }
 
     .titulo {
-        font-size: 1.0rem;
+        font-size: 1rem;
     }
 
     .titulo-detalle-general {
-        font-size: 1.0rem;
+        font-size: 1rem;
         margin: 0;
     }
 
     .subtitulo-detalle-general {
-        font-size: 1.0rem;
+        font-size: 1rem;
         margin: 0;
     }
 
@@ -208,7 +211,7 @@
     }
 }
 
-@media(width < 370px) {
+@media (width < 370px) {
     .titulo {
         font-size: 0.9rem;
     }
@@ -228,26 +231,38 @@
     .titulo-detalle-producto {
         font-size: 0.6rem;
     }
-    
+
     .titulo-propiedad {
         font-size: 0.6rem;
     }
-    
+
     .var-propiedad {
         font-size: 0.6rem;
     }
-    
+
     .valor-propiedad {
         font-size: 0.6rem;
     }
 }
 
-.no-results-container{
+.no-results-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 7rem;
 }
-.no-results-title{
+.no-results-title {
     font-size: 1.3333rem;
+}
+
+.info-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.info-porcentaje{
+    display: flex;
+    justify-content: space-around;
+}
+hr.solid {
+    border-top: 2px solid #818080;
 }

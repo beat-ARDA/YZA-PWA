@@ -67,6 +67,7 @@ export class CuerpoBusquedaComponent implements OnInit {
   getCategoryById(categoryId: string) {
     this._categoryService.getCategoryById(categoryId).subscribe((category) => {
       this.category = category;
+      console.log("category",category)
     });
   }
 

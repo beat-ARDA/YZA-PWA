@@ -13,15 +13,15 @@
     <div class="row detalle-general">
         <div class="col-6">
             <p class="titulo-detalle-general">Unidades</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaUnidades }} / {{
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaUnidades | number:'1.0':'en-US'}} / {{
                 category.variacionPorcentajeUnidades }}%</p>
             <p class="titulo-detalle-general">Contribución</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion }} / {{
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion | number:'1.0':'en-US'}} / {{
                 category.variacionPorcentajeContribucion }} %</p>
         </div>
         <div class="col-6">
             <p class="titulo-detalle-general">Venta</p>
-            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta }} / {{
+            <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta | number:'1.0':'en-US'}} / {{
                 category.variacionPorcentajeVenta }}%</p>
             <p class="titulo-detalle-general">Margen</p>
             <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen }}%</p>
@@ -35,31 +35,39 @@
                     <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
                     <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
                 </div>
-                <div class="row segunda-fila">
+                <p class="titulo-propiedad"></p>
+                <div class="info-flex">
+                    <div>
+                        <p class="titulo-propiedad">Unidades</p>
+                        <p class="valor-propiedad">${{ item.variacionMonedaUnidades | number:'1.0-10'}}</p>
+                    </div>
+                    <div>
+                        <p class="titulo-propiedad">Venta</p>
+                        <p class="valor-propiedad">${{ item.variacionMonedaVenta | number:'1.0-10'}}</p>
+                    </div>
+                    <div class="titulo-propiedad">
+                        <p class="titulo-propiedad">Contribución</p>
+                        <p class="valor-propiedad">${{ item.variacionMonedaContribucion | number:'1.0-10'}}</p>
+                    </div>
+                </div>
 
-                    <p class="col-3 titulo-propiedad">Unidades</p>
-                    <p class="col-3 titulo-propiedad">Venta</p>
-                    <p class="col-3 titulo-propiedad">Contribución</p>
-                    <p class="col-3 titulo-propiedad"></p>
-                </div>
-                <div class="row ">
-                    <p class="col-3 valor-propiedad">${{ item.variacionMonedaUnidades }}</p>
-                    <p class="col-3 valor-propiedad">${{ item.variacionMonedaVenta }}</p>
-                    <p class="col-3 valor-propiedad">${{ item.variacionMonedaContribucion }}</p>
-                    <p class="col-3 var-propiedad"></p>
-                </div>
-
-                <div class="row segunda-fila">
-                    <p class="col-3 titulo-propiedad">Unidades</p>
-                    <p class="col-3 titulo-propiedad">Venta</p>
-                    <p class="col-3 titulo-propiedad">Contribución</p>
-                    <p class="col-3 titulo-propiedad">Margen</p>
-                </div>
-                <div class="row ">
-                    <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
-                    <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
-                    <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
-                    <p class="col-3 valor-propiedad">%{{ item.variacionPorcentajeMargen }}</p>
+                <div class="info-flex">
+                    <div>
+                        <p class="titulo-propiedad">Unidades</p>
+                        <p class="valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
+                    </div>
+                    <div>
+                        <p class="titulo-propiedad">Venta</p>
+                        <p class="valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
+                    </div>
+                    <div>
+                        <p class="titulo-propiedad">Contribución</p>
+                        <p class="valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
+                    </div>
+                    <div>
+                        <p class="titulo-propiedad">Margen</p>
+                        <p class="valor-propiedad">%{{ item.variacionPorcentajeMargen }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,26 +79,27 @@
                     <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
                     <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
                 </div>
-                <div class="row segunda-fila">
-                    <p class="col-2 titulo-propiedad"></p>
-                    <p class="col-5 titulo-propiedad">Unidades</p>
-                    <p class="col-5 titulo-propiedad">Venta</p>
+                <p class="var-propiedad text-center">{{ period.tituloPrimerPeriodo }}</p>
+                <div class="info-porcentaje">
+                    <div>
+                        <p class="titulo-propiedad">Unidades</p>
+                        <p class="valor-propiedad">%{{ item.primerPeriodoPorcentajeUnidades }}</p>
+                    </div>
+                    <div>
+                        <p class="titulo-propiedad">Venta</p>
+                        <p class="valor-propiedad">%{{ item.primerPeriodoPorcentajeVenta }}</p>
+                    </div>
                 </div>
-                <div class="row ">
-                    <p class="col-2 var-propiedad">{{ period.tituloPrimerPeriodo }}</p>
-                    <p class="col-5 valor-propiedad">%{{ item.primerPeriodoPorcentajeUnidades }}</p>
-                    <p class="col-5 valor-propiedad">%{{ item.primerPeriodoPorcentajeVenta }}</p>
-                </div>
-
-                <div class="row segunda-fila">
-                    <p class="col-2 titulo-propiedad"></p>
-                    <p class="col-5 titulo-propiedad">Unidades</p>
-                    <p class="col-5 titulo-propiedad">Venta</p>
-                </div>
-                <div class="row ">
-                    <p class="col-2 var-propiedad">{{period.tituloSegundoPeriodo}}</p>
-                    <p class="col-5 valor-propiedad">%{{ item.segundoPeriodoPorcentajeUnidades }}</p>
-                    <p class="col-5 valor-propiedad">%{{ item.segundoPeriodoPorcentajeVenta }}</p>
+                <p class="var-propiedad text-center">{{period.tituloSegundoPeriodo}}</p>
+                <div class="info-porcentaje">
+                    <div>
+                        <p class="titulo-propiedad">Unidades</p>
+                        <p class="valor-propiedad">%{{ item.segundoPeriodoPorcentajeUnidades }}</p>
+                    </div>
+                    <div>
+                        <p class="titulo-propiedad">Venta</p>
+                        <p class="valor-propiedad">%{{ item.segundoPeriodoPorcentajeVenta }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,46 +111,40 @@
                     <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
                     <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
                 </div>
-                <div class="row segunda-fila">
-                    <div class="col-2 p-0 propiedad-container">
-                        <p class="var-propiedad">Var $$</p>
-                    </div>
-                    <div class="col-3 p-0">
+                <p class="var-propiedad text-center">Var $$</p>
+                <div class="info-flex">
+                    <div>
                         <p class="titulo-propiedad">Unidades</p>
-                        <p class="col-3 valor-propiedad">${{ item.variacionMonedaUnidades }}</p>
+                        <p class="valor-propiedad">${{ item.variacionMonedaUnidades | number:'1.0-10'}}</p>
                     </div>
-                    <div class="col-2 p-0">
+                    <div>
                         <p class="titulo-propiedad">Venta</p>
-                        <p class="col-3 valor-propiedad">${{ item.variacionMonedaVenta }}</p>
-
+                        <p class="valor-propiedad">${{ item.variacionMonedaVenta | number:'1.0-10'}}</p>
                     </div>
-                    <div class="col-5 p-0">
+                    <div>
                         <p class="titulo-propiedad">Contribución</p>
-                        <p class="col-5 valor-propiedad">${{ item.variacionMonedaContribucion }}</p>
+                        <p class="valor-propiedad">${{ item.variacionMonedaContribucion | number:'1.0-10'}}</p>
                     </div>
                 </div>
-                <div class="row segunda-fila">
-                    <div class="col-2 p-0 propiedad-container">
-                        <p class="var-propiedad">Var %%</p>
-                    </div>
-                    <div class="col-3 p-0">
+                <p class="var-propiedad text-center">Var %%</p>
+                <div class="info-flex">
+                    <div>
                         <p class="titulo-propiedad">Unidades</p>
                         <p class="valor-propiedad">%{{ item.variacionPorcentajeUnidades }}</p>
                     </div>
-                    <div class="col-2 p-0">
+                    <div>
                         <p class="titulo-propiedad">Venta</p>
                         <p class="valor-propiedad">%{{ item.variacionPorcentajeVenta }}</p>
                     </div>
-                    <div class="col-3 p-0">
+                    <div>
                         <p class="titulo-propiedad">Contribución</p>
                         <p class="valor-propiedad">%{{ item.variacionPorcentajeContribucion }}</p>
                     </div>
-                    <div class="col-2 p-0">
+                    <div>
                         <p class="titulo-propiedad">Margen</p>
                         <p class="valor-propiedad">%{{ item.variacionPorcentajeMargen }}</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

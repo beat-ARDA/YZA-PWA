@@ -1,81 +1,85 @@
 <div class="container-fluid padre">
- 
+
   <div *ngFor="let type of resume">
 
     <div class="container-fluid carta">
       <div class="row">
         <div class="col-12">
-           <p class="titulo-resumen">{{type.tipoId}}</p> 
+          <p class="titulo-resumen">{{type.tipoId}}</p>
         </div>
       </div>
     </div>
 
     <!-- Ventas -->
-    <div class="container-fluid carta" >
+    <div class="container-fluid carta">
       <div class="row">
         <div class="col-4">
           <p class="titulo-carta">Venta </p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_venta.png)'}"></div>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_venta.png)'}">
+          </div>
         </div>
         <div class="col-4">
           <p class="subtitulo"> {{currentPeriod.tituloPrimerPeriodo}}</p>
-          <p class="money">${{type.primerPeriodoVentas}}</p>
+          <p class="money">${{type.primerPeriodoVentas | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
         <div class="col-4">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
-          <p class="money">${{type.segundoPeriodoVentas}}</p>
-          <p class="var-money">${{type.variacionVentas}}</p>
+          <p class="money">${{type.segundoPeriodoVentas | number:'1.0-10'}}</p>
+          <p class="var-money">${{type.variacionVentas | number:'1.0-10'}}</p>
         </div>
       </div>
     </div>
 
     <!-- Unidades -->
-    <div class="container-fluid carta" >
+    <div class="container-fluid carta">
       <div class="row">
         <div class="col-4">
           <p class="titulo-carta">Unidades </p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_unidades.png)'}"></div>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_unidades.png)'}">
+          </div>
         </div>
         <div class="col-4">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
-          <p class="money">{{type.primerPeriodoUnidades}}</p>
+          <p class="money">{{type.primerPeriodoUnidades | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
         <div class="col-4">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
-          <p class="money">{{type.segundoPeriodoUnidades}}</p>
-          <p class="var-money">{{type.variacionUnidades}}</p>
+          <p class="money">{{type.segundoPeriodoUnidades | number:'1.0-10'}}</p>
+          <p class="var-money">{{type.variacionUnidades | number:'1.0-10'}}</p>
         </div>
       </div>
     </div>
 
     <!-- Contribucion -->
-    <div class="container-fluid carta" >
+    <div class="container-fluid carta">
       <div class="row">
         <div class="col-4">
           <p class="titulo-carta">Unidades</p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_contribucion.png)'}"></div>
+          <div class="icono-carta"
+            [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_contribucion.png)'}"></div>
         </div>
         <div class="col-4">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
-          <p class="money">{{type.primerPeriodoContribucion}}</p>
+          <p class="money">{{type.primerPeriodoContribucion | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
         <div class="col-4">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
-          <p class="money">{{type.segundoPeriodoContribucion}}</p>
-          <p class="var-money">{{type.variacionContribucion}}</p>
+          <p class="money">{{type.segundoPeriodoContribucion | number:'1.0-10'}}</p>
+          <p class="var-money">{{type.variacionContribucion | number:'1.0-10'}}</p>
         </div>
       </div>
     </div>
 
     <!-- Margen -->
-    <div class="container-fluid carta" >
+    <div class="container-fluid carta">
       <div class="row">
         <div class="col-4">
           <p class="titulo-carta">Margen</p>
-          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_margen.png)'}"></div>
+          <div class="icono-carta" [ngStyle]="{'background-image': 'url(../../../assets/Assets/iOS/ic_margen.png)'}">
+          </div>
         </div>
         <div class="col-4">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
