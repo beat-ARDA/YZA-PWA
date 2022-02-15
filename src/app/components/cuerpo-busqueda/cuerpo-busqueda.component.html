@@ -4,7 +4,7 @@
         <div class="icono-cerrar" [routerLink]="['/home', 'Soi']"></div>
     </div>
     <div class="row row-busqueda">
-        <input class="busqueda form-control mr-sm-2" type="search" placeholder="Ingrese una busqueda..."
+        <input class="busqueda form-control mr-sm-2" type="text" placeholder="Ingrese una búsqueda..."
             aria-label="Search" name="filterItems" (ngModelChange)="getFilteredItems()" [(ngModel)]="filterItems">
         <button type="submit" class="search-button">
             <div class="icono-busqueda"></div>

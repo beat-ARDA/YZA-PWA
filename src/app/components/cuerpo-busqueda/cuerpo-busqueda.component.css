@@ -20,9 +20,11 @@
     color: #313670;
     line-height: 1.175rem;
     letter-spacing: 0.035rem;
-    margin-top: 1.775rem;
-    margin-bottom: 1.4917rem;
     padding: 0px;
+    max-width: 260px;
+    width: 100%;
+    display: block;
+    margin: 1.775rem auto;
 }
 
 .row-titulo {
