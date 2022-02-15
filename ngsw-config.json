@@ -27,5 +27,23 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "apiSQL",
+      "urls": [
+        "https://apim-canibalizacion-poc-eastus2-01.azure-api.net/**"
+      ],
+      "version": 1,
+      "cacheConfig": {
+        "maxSize": 20,
+        "maxAge": "1d",
+        "timeout": "1h",
+        "strategy": "freshness"
+      },
+      "cacheQueryOptions": {
+        "ignoreSearch": false
+      }
+    }
   ]
 }
