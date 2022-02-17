@@ -6,7 +6,8 @@
         </div>
         <div class="row row-busqueda">
             <input class="busqueda form-control mr-sm-2" type="text" placeholder="Ingrese una búsqueda..."
-                aria-label="Search" name="filterItems" (ngModelChange)="getFilteredItems()" [(ngModel)]="filterItems">
+                [value]="filterItems" aria-label="Search" name="filterItems" (ngModelChange)="getFilteredItems()"
+                [(ngModel)]="filterItems">
             <button type="submit" class="search-button">
                 <div class="icono-busqueda"></div>
             </button>
@@ -20,7 +21,8 @@
                 <p class="subtitulo-detalle-general">{{ category.variacionMonedaUnidades | number:'1.0':'en-US'}} / {{
                     category.variacionPorcentajeUnidades }}%</p>
                 <p class="titulo-detalle-general">Contribución</p>
-                <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion | number:'1.0':'en-US'}} / {{
+                <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion | number:'1.0':'en-US'}}
+                    / {{
                     category.variacionPorcentajeContribucion }}%</p>
             </div>
             <div class="col-6">

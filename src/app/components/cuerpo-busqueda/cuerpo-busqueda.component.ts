@@ -32,11 +32,12 @@ export class CuerpoBusquedaComponent implements OnInit {
     private filterPipe: FilterPipe) { }
 
   ngOnInit(): void {
-
+    
     this._route.params.subscribe((params) => {
       this.categoryId = params['id'];
       this.section = params['name'];
-
+      this.filterItems = ""
+      console.log(this.filterItems)
       if (this.categoryId) {
         this.getCurrentPeriod(this.categoryId);
         this.getCategoryById(this.categoryId);
