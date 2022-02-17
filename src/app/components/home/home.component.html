@@ -65,13 +65,13 @@
       <div class="row custom-card-body">
         <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
-          <p class="money">{{type.primerPeriodoContribucion | number:'1.0-10'}}</p>
+          <p class="money">${{type.primerPeriodoContribucion | number:'1.0-10'}}</p>
           <p class="var">Var</p>
         </div>
         <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
-          <p class="money">{{type.segundoPeriodoContribucion | number:'1.0-10'}}</p>
-          <p class="var-money">{{type.variacionContribucion | number:'1.0-10'}}</p>
+          <p class="money">${{type.segundoPeriodoContribucion | number:'1.0-10'}}</p>
+          <p class="var-money">${{type.variacionContribucion | number:'1.0-10'}}</p>
         </div>
       </div>
     </div>
@@ -87,13 +87,13 @@
       <div class="row custom-card-body">
         <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
-          <p class="money">{{type.primerPeriodoMargen}}</p>
+          <p class="money">{{type.primerPeriodoMargen}}%</p>
           <p class="var">Var</p>
         </div>
         <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
-          <p class="money">{{type.segundoPeriodoMargen}}</p>
-          <p class="var-money">{{type.variacionMargen}}</p>
+          <p class="money">{{type.segundoPeriodoMargen}}%</p>
+          <p class="var-money">{{type.variacionMargen}}%</p>
         </div>
       </div>
     </div>
