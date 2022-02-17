@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
       this.getCurrentPeriod();
   }
-
+  // Get the last period
   getCurrentPeriod() {
     this.periodService.getCurrentPeriod().subscribe((period) => {
       this.currentPeriod = period;
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       this.getSoiResume();
     });
   }
-
+  // GET SOI data acording on periodId
   getSoiResume() {
     let periodId = this.getPeriodId();
 
@@ -38,9 +38,10 @@ export class HomeComponent implements OnInit {
   }
 
   savePeriodId(periodId: string) {
+    // Saving periodId in cache
     localStorage.setItem('periodId', periodId);
   }
-
+  // Obtaining the periodId from cache
   getPeriodId(): string {
     let periodId = localStorage.getItem('periodId');
     return periodId == null ? '': periodId;

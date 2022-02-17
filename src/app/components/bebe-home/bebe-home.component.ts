@@ -36,7 +36,6 @@ export class BebeHomeComponent implements OnInit {
       this.periodo = period;
       this.getCategories(this.periodo.id, typeResume);
     });
-    // this.categories = categories
   }
 
   getCategories(periodoId: string, typeResume: string) {

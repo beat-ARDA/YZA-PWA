@@ -54,31 +54,27 @@ export class CuerpoBusquedaComponent implements OnInit {
     });
   }
 
-
+  // Get products acording on category and current period
   getItems(periodoId: string, categoryId: string) {
     this._itemService.getItems(periodoId, categoryId).subscribe((items) => {
       this.items = items;
       this.filteredItems = this.items
     });
-    // this.items = articles;
-    // this.itemsFiltered = this.items
   }
-
+  // GET category data
   getCategoryById(categoryId: string) {
     this._categoryService.getCategoryById(categoryId).subscribe((category) => {
       this.category = category;
     });
   }
-
+  // Get the last period
   getCurrentPeriod(categoryId: string) {
     this._period.getCurrentPeriod().subscribe((period) => {
       this.period = period;
       this.getItems(this.period.id, categoryId);
     });
-    // this.items = articles;
-    // this.itemsFiltered = this.items
   }
-
+  // Save the categoryId in cache
   saveCategoryId(categoryId: string) {
     localStorage.setItem('categoryId', categoryId);
   }
@@ -86,7 +82,8 @@ export class CuerpoBusquedaComponent implements OnInit {
   getCategoryId(): string | null {
     return localStorage.getItem('categoryId');
   }
-
+  // this filter the items list depending of the search input value
+  // if empty returns the original list
   getFilteredItems() {
     this.filteredItems = this.filterItems.trim() !== "" ? this.filterPipe.transform([...this.items], this.filterItems)
       : this.items
