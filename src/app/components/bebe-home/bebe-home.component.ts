@@ -30,14 +30,14 @@ export class BebeHomeComponent implements OnInit {
         this.getCurrentPeriodo(typeResume);
     });
   }
-
+  // Loads last period info
   getCurrentPeriodo(typeResume: string) {
     this._periodoService.getCurrentPeriod().subscribe((period) => {
       this.periodo = period;
       this.getCategories(this.periodo.id, typeResume);
     });
   }
-
+  // Get category info acording of the typeResume recived on query param
   getCategories(periodoId: string, typeResume: string) {
     this._categoryService.getCategories(periodoId, typeResume).subscribe((categories) => {
       this.categories = categories;
