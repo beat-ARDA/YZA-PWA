@@ -37,7 +37,6 @@ export class CuerpoBusquedaComponent implements OnInit {
       this.categoryId = params['id'];
       this.section = params['name'];
       this.filterItems = ""
-      console.log(this.filterItems)
       if (this.categoryId) {
         this.getCurrentPeriod(this.categoryId);
         this.getCategoryById(this.categoryId);
