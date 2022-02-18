@@ -48,9 +48,12 @@
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word;  
 }
 
+.titulo-sombreado {
+  background-color: #e6e6eb;
+}
 
 .icono-carta {
   background-position: center;

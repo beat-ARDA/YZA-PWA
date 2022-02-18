@@ -137,6 +137,17 @@
     padding: 0rem;
     display: inline-block;
 }
+
+.titulo-detalle-producto_soi {
+    font-family: "lato-heavy";
+    font-size: 1rem;
+    letter-spacing: -0.0125rem;
+    color: #C70039;
+    margin: 0rem;
+    padding: 0rem;
+    display: inline-block;
+}
+
 .propiedad-container {
     display: flex;
     align-items: end;
@@ -231,6 +242,10 @@
     }
 
     .titulo-detalle-producto {
+        font-size: 0.6rem;
+    }
+
+    .titulo-detalle-producto_soi {
         font-size: 0.6rem;
     }
 

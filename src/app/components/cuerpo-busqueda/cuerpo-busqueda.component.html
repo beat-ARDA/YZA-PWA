@@ -6,8 +6,7 @@
         </div>
         <div class="row row-busqueda">
             <input class="busqueda form-control mr-sm-2" type="text" placeholder="Ingrese una búsqueda..."
-                [value]="filterItems" aria-label="Search" name="filterItems" (ngModelChange)="getFilteredItems()"
-                [(ngModel)]="filterItems">
+                [value]="filterItems" aria-label="Search" name="filterItems" [(ngModel)]="filterItems"  (keyup)="onKey($event)" > 
             <button type="submit" class="search-button">
                 <div class="icono-busqueda"></div>
             </button>
@@ -19,18 +18,18 @@
             <div class="col-6">
                 <p class="titulo-detalle-general">Unidades</p>
                 <p class="subtitulo-detalle-general">{{ category.variacionMonedaUnidades | number:'1.0':'en-US'}} / {{
-                    category.variacionPorcentajeUnidades }}%</p>
+                    category.variacionPorcentajeUnidades | number:'1.2-2' }}%</p>
                 <p class="titulo-detalle-general">Contribución</p>
                 <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaContribucion | number:'1.0':'en-US'}}
                     / {{
-                    category.variacionPorcentajeContribucion }}%</p>
+                    category.variacionPorcentajeContribucion | number:'1.2-2' }}%</p>
             </div>
             <div class="col-6">
                 <p class="titulo-detalle-general">Venta</p>
                 <p class="subtitulo-detalle-general">$ {{ category.variacionMonedaVenta | number:'1.0':'en-US'}} / {{
-                    category.variacionPorcentajeVenta }}%</p>
+                    category.variacionPorcentajeVenta | number:'1.2-2' }}%</p>
                 <p class="titulo-detalle-general">Margen</p>
-                <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen }}%</p>
+                <p class="subtitulo-detalle-general">{{ category.variacionPorcentajeMargen | number:'1.1-1' }}%</p>
             </div>
         </div>
     </div>
@@ -39,8 +38,8 @@
         <div *ngIf="section == 'Comportamiento'">
             <div class="titulos-detalle-producto" *ngFor="let item of filteredItems">
                 <div class="row content-padding">
-                    <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
-                    <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
+                    <p class="col-3" [ngClass]="item.soiArticulo ? 'titulo-detalle-producto_soi': 'titulo-detalle-producto'"> {{ 'Cod. ' + item.codigoArticulo }}</p>
+                    <p class="col-9" [ngClass]="item.soiArticulo ? 'titulo-detalle-producto_soi': 'titulo-detalle-producto'">{{ item.nombreArticulo }}</p>
                 </div>
                 <div class="row align-items-end">
                     <div class="col-6">
@@ -76,10 +75,10 @@
                 <div class="row">
                     <div class="col-6">
                         <p class="titulo-propiedad">Margen</p>
-                        <p class="valor-propiedad">{{ item.primerPeriodoComportamientoMargen }}%</p>
+                        <p class="valor-propiedad">{{ item.primerPeriodoComportamientoMargen | number:'1.1-1' }}%</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad margin-row">{{ item.segundoPeriodoComportamientoMargen }}%</p>
+                        <p class="valor-propiedad margin-row">{{ item.segundoPeriodoComportamientoMargen | number:'1.1-1'}}%</p>
                     </div>
                 </div>
                 <hr class="solid" />
@@ -90,8 +89,8 @@
         <div *ngIf="section == 'Porcentajes'">
             <div class="titulos-detalle-producto" *ngFor="let item of filteredItems">
                 <div class="row">
-                    <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
-                    <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
+                    <p class="col-3" [ngClass]="item.soiArticulo ? 'titulo-detalle-producto_soi': 'titulo-detalle-producto'" >{{ 'Cod. ' + item.codigoArticulo }}</p>
+                    <p class="col-9" [ngClass]="item.soiArticulo ? 'titulo-detalle-producto_soi': 'titulo-detalle-producto'">{{ item.nombreArticulo }}</p>
                 </div>
                 <div class="row">
                     <div class="col-12 p-0">
@@ -99,11 +98,11 @@
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Unidades</p>
-                        <p class="valor-propiedad">{{ item.primerPeriodoPorcentajeUnidades }}%</p>
+                        <p class="valor-propiedad">{{ item.primerPeriodoPorcentajeUnidades | number:'1.2-2' }}%</p>
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Venta</p>
-                        <p class="valor-propiedad">{{ item.primerPeriodoPorcentajeVenta }}%</p>
+                        <p class="valor-propiedad">{{ item.primerPeriodoPorcentajeVenta | number:'1.2-2' }}%</p>
                     </div>
                 </div>
                 <div class="row">
@@ -112,11 +111,11 @@
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Unidades</p>
-                        <p class="valor-propiedad">{{ item.segundoPeriodoPorcentajeUnidades }}%</p>
+                        <p class="valor-propiedad">{{ item.segundoPeriodoPorcentajeUnidades | number:'1.2-2' }}%</p>
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Venta</p>
-                        <p class="valor-propiedad">{{ item.segundoPeriodoPorcentajeVenta }}%</p>
+                        <p class="valor-propiedad">{{ item.segundoPeriodoPorcentajeVenta | number:'1.2-2' }}%</p>
                     </div>
                 </div>
                 <hr class="solid" />
@@ -127,8 +126,8 @@
         <div *ngIf="section == 'Variacion'">
             <div class="titulos-detalle-producto" *ngFor="let item of filteredItems">
                 <div class="row">
-                    <p class="col-3 titulo-detalle-producto">Cod. {{ item.codigoArticulo }}</p>
-                    <p class="col-9 titulo-detalle-producto">{{ item.nombreArticulo }}</p>
+                    <p class="col-3" [ngClass]="item.soiArticulo ? 'titulo-detalle-producto_soi': 'titulo-detalle-producto'">{{ 'Cod. ' + item.codigoArticulo }}</p>
+                    <p class="col-9" [ngClass]="item.soiArticulo ? 'titulo-detalle-producto_soi': 'titulo-detalle-producto'">{{ item.nombreArticulo }}</p>
                 </div>
                 <div class="row align-items-end">
                     <div class="col-6">
@@ -142,21 +141,21 @@
                         <p class="valor-propiedad">{{ item.variacionMonedaUnidades | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad">{{ item.variacionPorcentajeUnidades }}%</p>
+                        <p class="valor-propiedad">{{ item.variacionPorcentajeUnidades | number:'1.2-2'}}%</p>
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Venta</p>
                         <p class="valor-propiedad">${{ item.variacionMonedaVenta | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad">{{ item.variacionPorcentajeVenta }}%</p>
+                        <p class="valor-propiedad">{{ item.variacionPorcentajeVenta | number:'1.2-2' }}%</p>
                     </div>
                     <div class="col-6">
                         <p class="titulo-propiedad">Contribución</p>
                         <p class="valor-propiedad">${{ item.variacionMonedaContribucion | number:'1.0-10'}}</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad">{{ item.variacionPorcentajeContribucion }}%</p>
+                        <p class="valor-propiedad">{{ item.variacionPorcentajeContribucion | number:'1.2-2' }}%</p>
                     </div>
                 </div>
                 <div class="row">
@@ -164,7 +163,7 @@
                         <p class="titulo-propiedad">Margen</p>
                     </div>
                     <div class="col-6">
-                        <p class="valor-propiedad margin-row">{{ item.variacionPorcentajeMargen }}%</p>
+                        <p class="valor-propiedad margin-row">{{ item.variacionPorcentajeMargen | number:'1.1-1' }}%</p>
                     </div>
                 </div>
                 <hr class="solid" />

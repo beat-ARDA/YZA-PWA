@@ -82,10 +82,13 @@ export class CuerpoBusquedaComponent implements OnInit {
   getCategoryId(): string | null {
     return localStorage.getItem('categoryId');
   }
+  
   // this filter the items list depending of the search input value
   // if empty returns the original list
-  getFilteredItems() {
-    this.filteredItems = this.filterItems.trim() !== "" ? this.filterPipe.transform([...this.items], this.filterItems)
+  onKey(event: any) {
+    let textSearch = event.target.value;
+
+    this.filteredItems = textSearch.trim() !== "" ? this.filterPipe.transform([...this.items], textSearch.trim())
       : this.items
   }
 }

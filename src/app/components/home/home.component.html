@@ -3,8 +3,8 @@
   <div *ngFor="let type of resume">
 
     <div class="container-fluid carta">
-      <div class="row">
-        <div class="col-12">
+      <div class="row titulo-sombreado" >
+        <div class="col-12" >
           <p class="titulo-resumen">{{type.tipoId}}</p>
         </div>
       </div>
@@ -87,13 +87,13 @@
       <div class="row custom-card-body">
         <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloPrimerPeriodo}}</p>
-          <p class="money">{{type.primerPeriodoMargen}}%</p>
+          <p class="money">{{type.primerPeriodoMargen | number:'1.1-1'}}%</p>
           <p class="var">Var</p>
         </div>
         <div class="col-6">
           <p class="subtitulo">{{currentPeriod.tituloSegundoPeriodo}}</p>
-          <p class="money">{{type.segundoPeriodoMargen}}%</p>
-          <p class="var-money">{{type.variacionMargen}}%</p>
+          <p class="money">{{type.segundoPeriodoMargen | number:'1.1-1'}}%</p>
+          <p class="var-money">{{type.variacionMargen | number:'1.1-1'}}%</p>
         </div>
       </div>
     </div>
