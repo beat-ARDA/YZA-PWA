@@ -31,6 +31,17 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.header-carta{
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #4E535A;
+}
+
+.next-icon{
+  position: absolute;
+  right: 3px;
+  top: 1rem;
+}
 
 .titulo-carta {
   text-align: center;
@@ -42,7 +53,8 @@
   margin-top: 0px;
   margin-bottom:0px;
   padding-right: 2rem;
-  color: #818080;
+  /* color: #818080; */
+  color: #4E535A;
 }
 
 
